@@ -1,0 +1,31 @@
+.sidebar {
+	width: 200px;
+	flex: none;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: var(--space-4) var(--space-2);
+	border-right: 1px solid var(--color-divider);
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	padding: 8px 10px;
+	border-radius: var(--radius-md);
+	font-size: 13.5px;
+	color: var(--color-text);
+	text-decoration: none;
+	border-left: 3px solid transparent;
+}
+
+.item:hover {
+	background: color-mix(in srgb, var(--color-text) 6%, transparent);
+}
+
+.itemActive {
+	color: var(--color-accent-700);
+	background: var(--color-accent-100);
+	border-left-color: var(--color-accent);
+}

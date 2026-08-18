@@ -1,19 +1,37 @@
 import cors from "cors";
 import express from "express";
+import session from "express-session";
 import { errorHandler } from "./middleware/errorHandler";
 import { prisma } from "./lib/prisma";
+import { sessionStore } from "./lib/sessionStore";
+import authRoutes from "./routes/auth.routes";
 import recipeRoutes from "./routes/recipe.routes";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: process.env.CLIENT_ORIGIN, credentials: true }));
 app.use(express.json());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET as string,
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: false,
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+    },
+  }),
+);
 
 app.get("/api/health", async (_req, res) => {
   await prisma.$queryRaw`SELECT 1`;
   res.json({ status: "ok" });
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipeRoutes);
 
 app.use(errorHandler);

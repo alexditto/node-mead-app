@@ -29,6 +29,12 @@ services:
       DATABASE_URL: ${DATABASE_URL}
       SESSION_SECRET: ${SESSION_SECRET}
       PORT: ${SERVER_PORT:-4000}
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      CLIENT_ORIGIN: http://localhost:${CLIENT_PORT:-3000}
     ports:
       - "${SERVER_PORT:-4000}:4000"
     volumes:

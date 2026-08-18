@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import {
 	useState,
 	type ChangeEvent,
@@ -7,6 +8,8 @@ import {
 	type FormEvent,
 } from "react";
 import styles from "./AuthForm.module.css";
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 type AuthMode = "login" | "register";
 type FieldName = "name" | "email" | "password" | "confirmPassword";
@@ -57,9 +60,12 @@ function validateField(
 }
 
 export function AuthForm() {
+	const router = useRouter();
 	const [mode, setMode] = useState<AuthMode>("login");
 	const [values, setValues] = useState<FormValues>(initialValues);
 	const [errors, setErrors] = useState<FormErrors>({});
+	const [formError, setFormError] = useState<string | null>(null);
+	const [submitting, setSubmitting] = useState(false);
 
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {
 		const { name, value } = event.target;
@@ -74,8 +80,9 @@ export function AuthForm() {
 		}));
 	}
 
-	function handleSubmit(event: FormEvent<HTMLFormElement>) {
+	async function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
+		setFormError(null);
 
 		const fields: FieldName[] =
 			mode === "register"
@@ -88,6 +95,36 @@ export function AuthForm() {
 			if (error) nextErrors[field] = error;
 		}
 		setErrors(nextErrors);
+		if (Object.keys(nextErrors).length > 0) return;
+
+		const endpoint =
+			mode === "register" ? "/api/auth/register" : "/api/auth/login";
+		const payload =
+			mode === "register"
+				? { name: values.name, email: values.email, password: values.password }
+				: { email: values.email, password: values.password };
+
+		setSubmitting(true);
+		try {
+			const response = await fetch(`${API_URL}${endpoint}`, {
+				method: "POST",
+				credentials: "include",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(payload),
+			});
+
+			if (!response.ok) {
+				const data = await response.json().catch(() => ({}));
+				setFormError(data.error ?? "Something went wrong. Please try again.");
+				return;
+			}
+
+			router.push("/dashboard");
+		} catch {
+			setFormError("Unable to reach the server. Please try again.");
+		} finally {
+			setSubmitting(false);
+		}
 	}
 
 	function switchMode(nextMode: AuthMode) {
@@ -210,7 +247,13 @@ export function AuthForm() {
 				</div>
 			)}
 
-			<button type="submit" className="btn btn-primary btn-block">
+			{formError && <p className="form-error">{formError}</p>}
+
+			<button
+				type="submit"
+				className="btn btn-primary btn-block"
+				disabled={submitting}
+			>
 				{mode === "login" ? "Log In" : "Create Account"}
 			</button>
 		</form>
