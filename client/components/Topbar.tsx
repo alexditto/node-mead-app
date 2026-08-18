@@ -1,25 +1,22 @@
 "use client";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { useUser } from "@/components/UserProvider";
 
 export function Topbar() {
-	const API_URL = process.env.NEXT_PUBLIC_API_URL;
-	const router = useRouter();
-	async function handleLogout() {
-		await fetch(`${API_URL}/api/auth/logout`, {
-			method: "POST",
-			credentials: "include",
-		});
-		router.replace("/login");
-	}
+	const { user, logout } = useUser();
+
 	return (
 		<header className="topbar">
 			<div className="nav">
+				<Image
+					src="/img/mead_maker_logo.png"
+					alt="Mead Makers"
+					width={25}
+					height={25}
+				/>
 				<span className="nav-brand">Mead Makers</span>
-				<button
-					type="button"
-					className="btn btn-secondary"
-					onClick={handleLogout}
-				>
+				<div>{user?.name}</div>
+				<button type="button" className="btn btn-secondary" onClick={logout}>
 					Log Out
 				</button>
 			</div>

@@ -44,7 +44,13 @@ export async function login(req: Request, res: Response, next: NextFunction) {
 
     req.session.userId = user.id;
     res.json({
-      user: { id: user.id, name: user.name, email: user.email, createdAt: user.createdAt },
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        createdAt: user.createdAt,
+      },
     });
   } catch (err) {
     next(err);

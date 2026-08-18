@@ -1,0 +1,21 @@
+.dangerZone {
+	border-color: var(--color-danger);
+	background: color-mix(in srgb, var(--color-danger) 6%, transparent);
+}
+
+.dangerZone :global(.card-title) {
+	color: var(--color-danger);
+}
+
+.deleteButton {
+	color: var(--color-danger);
+	border-color: var(--color-danger);
+}
+
+.deleteButton:hover:not(:disabled) {
+	background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+}
+
+.deleteButton:active:not(:disabled) {
+	background: color-mix(in srgb, var(--color-danger) 22%, transparent);
+}

@@ -1,0 +1,10 @@
+.stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: var(--space-3);
+	max-width: 700px;
+}
+
+.sectionTitle {
+	margin-top: var(--space-6);
+}

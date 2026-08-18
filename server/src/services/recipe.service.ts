@@ -1,10 +1,10 @@
 import { prisma } from "../lib/prisma";
 
-export function listRecipes(userId?: number) {
+export function listRecipes(userId: number) {
   return prisma.recipe.findMany({
     where: {
+      userId,
       deletedAt: null,
-      ...(userId ? { userId } : {}),
     },
     orderBy: { createdAt: "desc" },
   });

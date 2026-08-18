@@ -5,7 +5,10 @@ import { errorHandler } from "./middleware/errorHandler";
 import { prisma } from "./lib/prisma";
 import { sessionStore } from "./lib/sessionStore";
 import authRoutes from "./routes/auth.routes";
+import batchRoutes from "./routes/batch.routes";
+import friendRoutes from "./routes/friend.routes";
 import recipeRoutes from "./routes/recipe.routes";
+import userRoutes from "./routes/user.routes";
 
 const app = express();
 
@@ -33,6 +36,9 @@ app.get("/api/health", async (_req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipeRoutes);
+app.use("/api/batches", batchRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/friends", friendRoutes);
 
 app.use(errorHandler);
 

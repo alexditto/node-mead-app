@@ -7,6 +7,7 @@ import {
 	type FocusEvent,
 	type FormEvent,
 } from "react";
+import { useUser } from "@/components/UserProvider";
 import styles from "./AuthForm.module.css";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -61,6 +62,7 @@ function validateField(
 
 export function AuthForm() {
 	const router = useRouter();
+	const { setUser } = useUser();
 	const [mode, setMode] = useState<AuthMode>("login");
 	const [values, setValues] = useState<FormValues>(initialValues);
 	const [errors, setErrors] = useState<FormErrors>({});
@@ -113,12 +115,14 @@ export function AuthForm() {
 				body: JSON.stringify(payload),
 			});
 
+			const data = await response.json().catch(() => ({}));
+
 			if (!response.ok) {
-				const data = await response.json().catch(() => ({}));
 				setFormError(data.error ?? "Something went wrong. Please try again.");
 				return;
 			}
 
+			setUser(data.user);
 			router.push("/dashboard");
 		} catch {
 			setFormError("Unable to reach the server. Please try again.");
