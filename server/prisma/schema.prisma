@@ -1,0 +1,66 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  name         String
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  recipes Recipe[]
+  batches Batch[]
+
+  @@map("users")
+}
+
+model Recipe {
+  id          Int       @id @default(autoincrement())
+  userId      Int       @map("user_id")
+  name        String
+  ingredients String    @db.Text
+  imageUrl    String?   @map("image_url")
+  deletedAt   DateTime? @map("deleted_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  user    User    @relation(fields: [userId], references: [id])
+  batches Batch[]
+
+  @@map("recipes")
+}
+
+model Batch {
+  id                          Int         @id @default(autoincrement())
+  recipeId                    Int         @map("recipe_id")
+  userId                      Int         @map("user_id")
+  status                      BatchStatus @default(ACTIVE)
+  startDate                   DateTime    @map("start_date")
+  primaryFermentationDateEnd  DateTime?   @map("primary_fermentation_date_end")
+  rackingDateEnd              DateTime?   @map("racking_date_end")
+  bottleDate                  DateTime?   @map("bottle_date")
+  originalGravity             Float?      @map("original_gravity")
+  finalGravity                Float?      @map("final_gravity")
+  imageUrl                    String?     @map("image_url")
+  createdAt                   DateTime    @default(now()) @map("created_at")
+  updatedAt                   DateTime    @updatedAt @map("updated_at")
+
+  recipe Recipe @relation(fields: [recipeId], references: [id])
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@map("batches")
+}
+
+enum BatchStatus {
+  ACTIVE
+  CLEARING
+  BOTTLED
+  FAILED
+}

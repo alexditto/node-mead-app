@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*.local
+
+# server
+server/dist/
+server/uploads/*
+!server/uploads/.gitkeep
+
+# client (Next.js)
+client/.next/
+client/next-env.d.ts
+
+.DS_Store

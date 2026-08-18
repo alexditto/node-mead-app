@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;600&family=Roboto+Mono:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Architects Daughter',system-ui,sans-serif}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+a{color:#8a6d3b}a:hover{color:#5f4a26}
+</style></helmet>
+
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">Dark mode — <a class="dv-oid" href="#3a">3a</a> and <a class="dv-oid" href="#3b">3b</a> on the dark tokens (Active back to blue per your status table)</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a">
+<div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>Dashboard — dark</div>
+<div class="dv-card" style="width:860px;border-color:#2D3039">
+<div style="background:#0F1419;font-family:Lora,Georgia,serif;color:#E8EAED">
+<div style="display:flex;align-items:center;gap:16px;padding:13px 18px;background:#1E212E;border-bottom:1px solid #2D3039">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600;color:#E8EAED">Mead<span style="color:#F0D563">Makers</span></div>
+<div style="flex:1;height:30px;border:1px solid #2D3039;border-radius:15px;background:#0F1419;display:flex;align-items:center;padding:0 12px;font-size:11.5px;color:#A0A0A0">Search batches or recipes</div>
+<div style="width:28px;height:28px;border-radius:50%;background:#F0D563;color:#0F1419;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:600">AV</div>
+<div style="font-size:11.5px;color:#C4D0E0">Avery ▾</div>
+</div>
+<div style="display:flex;min-height:540px">
+<div style="width:180px;background:#1E212E;border-right:1px solid #2D3039;padding:16px 12px;display:flex;flex-direction:column;gap:4px">
+<div style="padding:8px 10px;border-radius:6px;background:#262A38;border-left:3px solid #F0D563;font-size:12.5px;color:#E8EAED">Dashboard</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#C4D0E0">Calendar</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#C4D0E0">My Recipes</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#C4D0E0">Community Recipes</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#C4D0E0">Settings</div>
+<div style="height:1px;background:#2D3039;margin:10px 0"></div>
+<div style="display:flex;flex-direction:column;gap:8px;padding:0 10px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#A0A0A0">Active</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#5DADE2">3</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#A0A0A0">Bottled</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#58D68D">12</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#A0A0A0">Failed</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#EC7063">2</span></div>
+</div>
+<div style="flex:1"></div>
+<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;border-top:1px solid #2D3039;font-size:11px;color:#A0A0A0"><span style="width:30px;height:16px;border-radius:8px;background:#2D3039;display:flex;justify-content:flex-end;align-items:center;padding:0 2px"><span style="width:12px;height:12px;border-radius:50%;background:#F0D563"></span></span>Dark</div>
+</div>
+<div style="flex:1;padding:18px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600">Your cellar</div>
+<div style="flex:1"></div>
+<div style="border-radius:6px;padding:8px 15px;font-size:12.5px;background:#F0D563;color:#0F1419">+ New Batch</div>
+</div>
+<div style="display:flex;gap:4px;border-bottom:1px solid #2D3039">
+<div style="padding:7px 12px;font-size:12px;border-bottom:2.5px solid #F0D563;margin-bottom:-1px;color:#E8EAED">All <span style="color:#A0A0A0">17</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#A0A0A0">Active <span style="color:#6B7280">3</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#A0A0A0">Clearing <span style="color:#6B7280">2</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#A0A0A0">Bottled <span style="color:#6B7280">12</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#A0A0A0">Failed <span style="color:#6B7280">2</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 0 11px;border-bottom:1px solid #2D3039">
+<div style="font-family:'Roboto Mono',monospace;font-size:9.5px;letter-spacing:.08em;color:#6B7280">FILTER</div>
+<div style="border:1px solid #2D3039;background:#1E212E;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#C4D0E0;display:flex;gap:14px"><span>Recipe: any</span><span style="color:#6B7280">▾</span></div>
+<div style="border:1px solid #4ECDC4;background:rgba(78,205,196,.12);border-radius:6px;padding:6px 10px;font-size:11.5px;color:#4ECDC4;display:flex;gap:14px"><span>Honey: Wildflower</span><span>▾</span></div>
+<div style="border:1px solid #2D3039;background:#1E212E;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#C4D0E0;display:flex;gap:14px"><span>Yeast: any</span><span style="color:#6B7280">▾</span></div>
+<div style="border:1px solid #2D3039;background:#1E212E;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#C4D0E0;display:flex;gap:14px"><span>Started: last 12 mo</span><span style="color:#6B7280">▾</span></div>
+<div style="border:1px solid #4ECDC4;background:rgba(78,205,196,.12);border-radius:6px;padding:6px 10px;font-size:11.5px;color:#4ECDC4;display:flex;gap:7px;align-items:center"><span style="width:12px;height:12px;border-radius:3px;background:#4ECDC4;color:#0F1419;font-size:9px;display:flex;align-items:center;justify-content:center">✓</span>Reading due</div>
+<div style="flex:1"></div>
+<div style="font-size:11.5px;color:#C4D0E0">Sort: due date <span style="color:#6B7280">▾</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:11px 0 14px;flex-wrap:wrap">
+<div style="font-size:11.5px;color:#A0A0A0">Showing <span style="color:#E8EAED">3</span> of 17</div>
+<div style="border-radius:14px;padding:4px 10px;font-size:10.5px;background:#262A38;color:#C4D0E0;display:flex;gap:8px"><span>Wildflower</span><span style="color:#6B7280">✕</span></div>
+<div style="border-radius:14px;padding:4px 10px;font-size:10.5px;background:#262A38;color:#C4D0E0;display:flex;gap:8px"><span>Reading due</span><span style="color:#6B7280">✕</span></div>
+<div style="font-size:11px;color:#4ECDC4;text-decoration:underline">Clear all</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+<div style="border:1px solid #2D3039;border-radius:8px;padding:15px;background:#1E212E;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower 2024 · Batch 3</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:rgba(93,173,226,.16);color:#5DADE2;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:11.5px;color:#4ECDC4;text-decoration:underline">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#A0A0A0">Started Jan 15 · day 13</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#2D3039;overflow:hidden"><div style="width:78%;height:100%;background:#F0D563"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#A0A0A0;margin-top:6px"><span style="color:#E8EAED">1.025 SG</span><span>target 0.995</span></div>
+</div>
+<div style="font-size:11.5px;color:#C4D0E0">Last reading 2 days ago · est. <span style="font-family:'Roboto Mono',monospace">~Feb 18</span></div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#F0D563;color:#0F1419">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #3A3F4C;border-radius:6px;padding:8px;font-size:12px;color:#C4D0E0">Details</div>
+</div>
+</div>
+
+<div style="border:1px solid #2D3039;border-radius:8px;padding:15px;background:#1E212E;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower 2023 · Batch 2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:rgba(243,156,18,.16);color:#F39C12;letter-spacing:.08em">CLEARING</div>
+</div>
+<div style="font-size:11.5px;color:#4ECDC4;text-decoration:underline">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#A0A0A0">Started Dec 02 · day 57</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#2D3039;overflow:hidden"><div style="width:100%;height:100%;background:#F0D563"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#A0A0A0;margin-top:6px"><span style="color:#E8EAED">0.998 SG</span><span>stabilized Jan 27</span></div>
+</div>
+<div style="font-size:11.5px;color:#EC7063">Reading overdue by 5 days</div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#F0D563;color:#0F1419">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #3A3F4C;border-radius:6px;padding:8px;font-size:12px;color:#C4D0E0">Details</div>
+</div>
+</div>
+
+<div style="border:1px solid #2D3039;border-radius:8px;padding:15px;background:#1E212E;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower Melomel</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:rgba(93,173,226,.16);color:#5DADE2;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:11.5px;color:#4ECDC4;text-decoration:underline">Berry Melomel v2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#A0A0A0">Started Jan 24 · day 4</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#2D3039;overflow:hidden"><div style="width:22%;height:100%;background:#F0D563"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#A0A0A0;margin-top:6px"><span style="color:#E8EAED">1.094 SG</span><span>target 0.996</span></div>
+</div>
+<div style="font-size:11.5px;color:#EC7063">Reading due today</div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#F0D563;color:#0F1419">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #3A3F4C;border-radius:6px;padding:8px;font-size:12px;color:#C4D0E0">Details</div>
+</div>
+</div>
+
+<div style="border:1px dashed #3A3F4C;border-radius:8px;padding:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:158px;background:rgba(30,33,46,.5)">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:#C4D0E0">No more matches</div>
+<div style="font-size:11.5px;color:#A0A0A0;text-align:center;max-width:190px">Widen your filters, or start something new.</div>
+<div style="border:1px solid #F0D563;border-radius:6px;padding:6px 12px;font-size:11.5px;color:#F0D563">+ New Batch</div>
+</div>
+
+</div>
+<div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding-top:12px;border-top:1px solid #2D3039">
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#6B7280">STATUS · DARK</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:rgba(93,173,226,.16);color:#5DADE2">ACTIVE</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:rgba(248,183,57,.16);color:#F8B739">STABILIZED</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:rgba(243,156,18,.16);color:#F39C12">CLEARING</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:rgba(88,214,141,.16);color:#58D68D">BOTTLED</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:rgba(236,112,99,.16);color:#EC7063">FAILED</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:3px 8px;border-radius:11px;background:#262A38;color:#5D6D7B">ARCHIVED</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="4b">
+<div class="dv-olabel"><a class="dv-oid" href="#4b">4b</a>Batch details — dark</div>
+<div class="dv-card" style="width:780px;border-color:#2D3039">
+<div style="background:#0F1419;font-family:Lora,Georgia,serif;color:#E8EAED">
+<div style="padding:12px 20px;background:#1E212E;border-bottom:1px solid #2D3039;display:flex;align-items:center;gap:12px">
+<div style="font-size:11.5px;color:#A0A0A0">← Cellar</div>
+<div style="flex:1"></div>
+<div style="border-radius:6px;padding:7px 14px;font-size:12px;background:#F0D563;color:#0F1419">Log Reading</div>
+<div style="border:1px solid #3A3F4C;border-radius:6px;padding:7px 12px;font-size:12px;color:#C4D0E0">Change Status ▾</div>
+</div>
+<div style="padding:20px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;line-height:1.1">Wildflower 2024 · Batch 3</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9.5px;padding:4px 10px;border-radius:12px;background:rgba(93,173,226,.16);color:#5DADE2;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:12px;color:#A0A0A0;margin-top:6px">Recipe <span style="color:#4ECDC4;text-decoration:underline">Traditional Wildflower Mead</span> · Started Jan 15, 2024 · day 13</div>
+
+<div style="margin-top:18px;border:1px solid #2D3039;border-radius:8px;padding:16px;background:#1E212E">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600">Fermentation curve</div>
+<div style="display:flex;gap:14px;align-items:center;font-family:'Roboto Mono',monospace;font-size:9.5px;color:#A0A0A0">
+<span style="color:#4ECDC4">● readings</span><span style="color:#F0D563">– – predicted</span><span style="color:#EC7063">– – target</span>
+<span style="display:flex;border:1px solid #3A3F4C;border-radius:5px;overflow:hidden"><span style="padding:3px 8px;background:#C4D0E0;color:#0F1419">SG</span><span style="padding:3px 8px;color:#A0A0A0">°Brix</span></span>
+</div>
+</div>
+<svg width="700" height="230" viewBox="0 0 700 230" style="display:block">
+<rect x="46" y="8" width="646" height="180" fill="#171A24" stroke="#2D3039"></rect>
+<line x1="46" y1="53" x2="692" y2="53" stroke="#23262F"></line>
+<line x1="46" y1="98" x2="692" y2="98" stroke="#23262F"></line>
+<line x1="46" y1="143" x2="692" y2="143" stroke="#23262F"></line>
+<line x1="46" y1="174" x2="692" y2="174" stroke="#EC7063" stroke-width="1.4" stroke-dasharray="6 4"></line>
+<text x="606" y="168" font-family="Roboto Mono" font-size="9.5" fill="#EC7063">target 0.995</text>
+<polyline points="54,20 112,35 174,64 240,98 306,126 362,144" fill="none" stroke="#4ECDC4" stroke-width="2.4"></polyline>
+<polyline points="362,144 432,158 504,167 578,171 676,174" fill="none" stroke="#F0D563" stroke-width="2.4" stroke-dasharray="7 5"></polyline>
+<g fill="#4ECDC4"><circle cx="54" cy="20" r="4.5"></circle><circle cx="112" cy="35" r="4.5"></circle><circle cx="174" cy="64" r="4.5"></circle><circle cx="240" cy="98" r="4.5"></circle><circle cx="306" cy="126" r="4.5"></circle><circle cx="362" cy="144" r="5.5" stroke="#0F1419" stroke-width="2"></circle></g>
+<g font-family="Roboto Mono" font-size="9.5" fill="#6B7280"><text x="8" y="24">1.120</text><text x="8" y="69">1.080</text><text x="8" y="114">1.040</text><text x="8" y="178">1.000</text><text x="50" y="206">day 0</text><text x="340" y="206">day 13</text><text x="652" y="206">day 34</text></g>
+<rect x="372" y="28" width="158" height="48" rx="5" fill="#C4D0E0"></rect>
+<g font-family="Roboto Mono" font-size="9.5" fill="#0F1419"><text x="383" y="46">Jan 28 · 1.025 SG</text><text x="383" y="61" fill="#3A3F4C">70°F · activity slowing</text></g>
+</svg>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px">
+<div style="border:1px solid #2D3039;border-radius:8px;padding:12px;background:#1E212E"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#6B7280">START SG</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">1.120</div></div>
+<div style="border:1px solid #4ECDC4;border-radius:8px;padding:12px;background:rgba(78,205,196,.1)"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#4ECDC4">CURRENT</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px;color:#4ECDC4">1.025</div></div>
+<div style="border:1px solid #2D3039;border-radius:8px;padding:12px;background:#1E212E"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#6B7280">ABV NOW</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">12.8%</div></div>
+<div style="border:1px solid #2D3039;border-radius:8px;padding:12px;background:#1E212E"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#6B7280">TEMP AVG</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">70°F</div></div>
+<div style="border:1px solid rgba(240,213,99,.5);border-radius:8px;padding:12px;background:rgba(240,213,99,.1)"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#F0D563">EST. DONE</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px;color:#F0D563">Feb 18</div></div>
+</div>
+
+<div style="margin-top:18px;border:1px solid #2D3039;border-radius:8px;overflow:hidden;background:#1E212E">
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#A0A0A0;background:#171A24;padding:10px 12px;border-bottom:1px solid #2D3039"><div>DATE</div><div>GRAVITY</div><div>TEMP</div><div>DAY</div><div>NOTES</div><div></div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #23262F"><div>Jan 28 · 7:10p</div><div style="font-family:'Roboto Mono',monospace;color:#4ECDC4">1.025</div><div style="font-family:'Roboto Mono',monospace">70°F</div><div style="font-family:'Roboto Mono',monospace">13</div><div style="color:#A0A0A0">Activity slowing</div><div style="text-align:right;color:#6B7280">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #23262F"><div>Jan 24 · 8:02a</div><div style="font-family:'Roboto Mono',monospace">1.042</div><div style="font-family:'Roboto Mono',monospace">71°F</div><div style="font-family:'Roboto Mono',monospace">9</div><div style="color:#6B7280">—</div><div style="text-align:right;color:#6B7280">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #23262F"><div>Jan 20 · 6:40p</div><div style="font-family:'Roboto Mono',monospace">1.068</div><div style="font-family:'Roboto Mono',monospace">72°F</div><div style="font-family:'Roboto Mono',monospace">5</div><div style="color:#A0A0A0">Vigorous</div><div style="text-align:right;color:#6B7280">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px"><div>Jan 15 · 5:15p</div><div style="font-family:'Roboto Mono',monospace">1.120</div><div style="font-family:'Roboto Mono',monospace">68°F</div><div style="font-family:'Roboto Mono',monospace">0</div><div style="color:#A0A0A0">Pitched T58</div><div style="text-align:right;color:#6B7280">⋯</div></div>
+</div>
+
+<div style="margin-top:14px;display:flex;gap:12px;align-items:center;border:1px solid #2D3039;border-radius:8px;padding:12px 14px;background:#1E212E">
+<div style="width:36px;height:20px;border-radius:10px;background:#4ECDC4;display:flex;justify-content:flex-end;align-items:center;padding:0 2px"><div style="width:16px;height:16px;border-radius:50%;background:#0F1419"></div></div>
+<div style="font-size:11.5px;color:#C4D0E0">Notify me within <span style="font-family:'Roboto Mono',monospace">±0.005 SG</span> of target · last sent Jan 25</div>
+<div style="flex:1"></div>
+<div style="font-size:11.5px;color:#4ECDC4;text-decoration:underline">Snooze 3 days</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "dark version of the mobile screens" · "the gold buttons are too bright on dark — try gold outline" · "put the light/dark toggle in the header instead"</p>
+</section>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Palette applied to <a class="dv-oid" href="#2a">2a</a> — gold / slate / teal on off-white</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Dashboard, in color</div>
+<div class="dv-card" style="width:860px;border-color:#E2E8ED">
+<div style="background:#F8F9FA;font-family:Lora,Georgia,serif;color:#2D3748">
+<div style="display:flex;align-items:center;gap:16px;padding:13px 18px;background:#4A5568">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:600;color:#F8F9FA;letter-spacing:.01em">Mead<span style="color:#E8C547">Makers</span></div>
+<div style="flex:1;height:30px;border:1px solid #5D6A7D;border-radius:15px;background:#3E4959;display:flex;align-items:center;padding:0 12px;font-size:11.5px;color:#A0AEC0">Search batches or recipes</div>
+<div style="width:28px;height:28px;border-radius:50%;background:#E8C547;color:#4A5568;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:600">AV</div>
+<div style="font-size:11.5px;color:#E2E8F0">Avery ▾</div>
+</div>
+<div style="display:flex;min-height:540px">
+<div style="width:180px;background:#FFFFFF;border-right:1px solid #E2E8ED;padding:16px 12px;display:flex;flex-direction:column;gap:4px">
+<div style="padding:8px 10px;border-radius:6px;background:#FDF6DE;border-left:3px solid #E8C547;font-size:12.5px;color:#2D3748">Dashboard</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#4A5568">Calendar</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#4A5568">My Recipes</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#4A5568">Community Recipes</div>
+<div style="padding:8px 10px;font-size:12.5px;color:#4A5568">Settings</div>
+<div style="height:1px;background:#E2E8ED;margin:10px 0"></div>
+<div style="display:flex;flex-direction:column;gap:8px;padding:0 10px">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#718096">Active</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#17A2B8">3</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#718096">Bottled</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#2F855A">12</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#718096">Failed</span><span style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#C53030">2</span></div>
+</div>
+</div>
+<div style="flex:1;padding:18px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:600">Your cellar</div>
+<div style="flex:1"></div>
+<div style="border-radius:6px;padding:8px 15px;font-size:12.5px;background:#E8C547;color:#2D3748;box-shadow:0 1px 2px rgba(45,55,72,.12)">+ New Batch</div>
+</div>
+<div style="display:flex;gap:4px;border-bottom:1px solid #E2E8ED">
+<div style="padding:7px 12px;font-size:12px;border-bottom:2.5px solid #E8C547;margin-bottom:-1px;color:#2D3748">All <span style="color:#718096">17</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#718096">Active <span style="color:#A0AEC0">3</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#718096">Clearing <span style="color:#A0AEC0">2</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#718096">Bottled <span style="color:#A0AEC0">12</span></div>
+<div style="padding:7px 12px;font-size:12px;color:#718096">Failed <span style="color:#A0AEC0">2</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 0 11px;border-bottom:1px solid #E2E8ED">
+<div style="font-family:'Roboto Mono',monospace;font-size:9.5px;letter-spacing:.08em;color:#A0AEC0">FILTER</div>
+<div style="border:1px solid #E2E8ED;background:#fff;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#4A5568;display:flex;gap:14px"><span>Recipe: any</span><span style="color:#A0AEC0">▾</span></div>
+<div style="border:1px solid #17A2B8;background:#E6F6F8;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#0F6F80;display:flex;gap:14px"><span>Honey: Wildflower</span><span style="color:#17A2B8">▾</span></div>
+<div style="border:1px solid #E2E8ED;background:#fff;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#4A5568;display:flex;gap:14px"><span>Yeast: any</span><span style="color:#A0AEC0">▾</span></div>
+<div style="border:1px solid #E2E8ED;background:#fff;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#4A5568;display:flex;gap:14px"><span>Started: last 12 mo</span><span style="color:#A0AEC0">▾</span></div>
+<div style="border:1px solid #17A2B8;background:#E6F6F8;border-radius:6px;padding:6px 10px;font-size:11.5px;color:#0F6F80;display:flex;gap:7px;align-items:center"><span style="width:12px;height:12px;border-radius:3px;background:#17A2B8;color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center">✓</span>Reading due</div>
+<div style="flex:1"></div>
+<div style="font-size:11.5px;color:#4A5568">Sort: due date <span style="color:#A0AEC0">▾</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:11px 0 14px;flex-wrap:wrap">
+<div style="font-size:11.5px;color:#718096">Showing <span style="color:#2D3748">3</span> of 17</div>
+<div style="border-radius:14px;padding:4px 10px;font-size:10.5px;background:#EDF2F7;color:#4A5568;display:flex;gap:8px"><span>Wildflower</span><span style="color:#A0AEC0">✕</span></div>
+<div style="border-radius:14px;padding:4px 10px;font-size:10.5px;background:#EDF2F7;color:#4A5568;display:flex;gap:8px"><span>Reading due</span><span style="color:#A0AEC0">✕</span></div>
+<div style="font-size:11px;color:#0F6F80;text-decoration:underline">Clear all</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:15px;background:#fff;box-shadow:0 1px 3px rgba(45,55,72,.06);display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower 2024 · Batch 3</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:#E6F6F8;color:#0F6F80;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:11.5px;color:#0F6F80;text-decoration:underline">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#718096">Started Jan 15 · day 13</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#EDF2F7;overflow:hidden"><div style="width:78%;height:100%;background:#E8C547"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#718096;margin-top:6px"><span style="color:#2D3748">1.025 SG</span><span>target 0.995</span></div>
+</div>
+<div style="font-size:11.5px;color:#4A5568">Last reading 2 days ago · est. <span style="font-family:'Roboto Mono',monospace">~Feb 18</span></div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#E8C547;color:#2D3748">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #CBD5E0;border-radius:6px;padding:8px;font-size:12px;color:#4A5568">Details</div>
+</div>
+</div>
+
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:15px;background:#fff;box-shadow:0 1px 3px rgba(45,55,72,.06);display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower 2023 · Batch 2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:#FDF6DE;color:#8A6D12;letter-spacing:.08em">CLEARING</div>
+</div>
+<div style="font-size:11.5px;color:#0F6F80;text-decoration:underline">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#718096">Started Dec 02 · day 57</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#EDF2F7;overflow:hidden"><div style="width:100%;height:100%;background:#E8C547"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#718096;margin-top:6px"><span style="color:#2D3748">0.998 SG</span><span>stabilized Jan 27</span></div>
+</div>
+<div style="font-size:11.5px;color:#C53030">Reading overdue by 5 days</div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#E8C547;color:#2D3748">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #CBD5E0;border-radius:6px;padding:8px;font-size:12px;color:#4A5568">Details</div>
+</div>
+</div>
+
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:15px;background:#fff;box-shadow:0 1px 3px rgba(45,55,72,.06);display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2">Wildflower Melomel</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9px;padding:4px 9px;border-radius:12px;background:#E6F6F8;color:#0F6F80;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:11.5px;color:#0F6F80;text-decoration:underline">Berry Melomel v2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#718096">Started Jan 24 · day 4</div>
+<div>
+<div style="height:8px;border-radius:4px;background:#EDF2F7;overflow:hidden"><div style="width:22%;height:100%;background:#E8C547"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#718096;margin-top:6px"><span style="color:#2D3748">1.094 SG</span><span>target 0.996</span></div>
+</div>
+<div style="font-size:11.5px;color:#C53030">Reading due today</div>
+<div style="display:flex;gap:9px;margin-top:2px">
+<div style="flex:1;text-align:center;border-radius:6px;padding:8px;font-size:12px;background:#E8C547;color:#2D3748">Log Reading</div>
+<div style="flex:1;text-align:center;border:1px solid #CBD5E0;border-radius:6px;padding:8px;font-size:12px;color:#4A5568">Details</div>
+</div>
+</div>
+
+<div style="border:1px dashed #CBD5E0;border-radius:8px;padding:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:158px;background:#fff">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;color:#4A5568">No more matches</div>
+<div style="font-size:11.5px;color:#718096;text-align:center;max-width:190px">Widen your filters, or start something new.</div>
+<div style="border:1px solid #E8C547;border-radius:6px;padding:6px 12px;font-size:11.5px;color:#8A6D12">+ New Batch</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Batch details (<a class="dv-oid" href="#1d">1d</a>) on the same palette</div>
+<div class="dv-card" style="width:780px;border-color:#E2E8ED">
+<div style="background:#F8F9FA;font-family:Lora,Georgia,serif;color:#2D3748">
+<div style="padding:12px 20px;background:#4A5568;display:flex;align-items:center;gap:12px">
+<div style="font-size:11.5px;color:#CBD5E0">← Cellar</div>
+<div style="flex:1"></div>
+<div style="border-radius:6px;padding:7px 14px;font-size:12px;background:#E8C547;color:#2D3748">Log Reading</div>
+<div style="border:1px solid #8794A8;border-radius:6px;padding:7px 12px;font-size:12px;color:#E2E8F0">Change Status ▾</div>
+</div>
+<div style="padding:20px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;line-height:1.1">Wildflower 2024 · Batch 3</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:9.5px;padding:4px 10px;border-radius:12px;background:#E6F6F8;color:#0F6F80;letter-spacing:.08em">ACTIVE</div>
+</div>
+<div style="font-size:12px;color:#718096;margin-top:6px">Recipe <span style="color:#0F6F80;text-decoration:underline">Traditional Wildflower Mead</span> · Started Jan 15, 2024 · day 13</div>
+
+<div style="margin-top:18px;border:1px solid #E2E8ED;border-radius:8px;padding:16px;background:#fff;box-shadow:0 1px 3px rgba(45,55,72,.06)">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+<div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600">Fermentation curve</div>
+<div style="display:flex;gap:14px;align-items:center;font-family:'Roboto Mono',monospace;font-size:9.5px;color:#718096">
+<span style="color:#17A2B8">● readings</span><span style="color:#8A6D12">– – predicted</span><span style="color:#C53030">– – target</span>
+<span style="display:flex;border:1px solid #E2E8ED;border-radius:5px;overflow:hidden"><span style="padding:3px 8px;background:#4A5568;color:#F8F9FA">SG</span><span style="padding:3px 8px;color:#718096">°Brix</span></span>
+</div>
+</div>
+<svg width="700" height="230" viewBox="0 0 700 230" style="display:block">
+<rect x="46" y="8" width="646" height="180" fill="#FCFDFD" stroke="#E2E8ED"></rect>
+<line x1="46" y1="53" x2="692" y2="53" stroke="#EDF2F7"></line>
+<line x1="46" y1="98" x2="692" y2="98" stroke="#EDF2F7"></line>
+<line x1="46" y1="143" x2="692" y2="143" stroke="#EDF2F7"></line>
+<line x1="46" y1="174" x2="692" y2="174" stroke="#C53030" stroke-width="1.4" stroke-dasharray="6 4"></line>
+<text x="606" y="168" font-family="Roboto Mono" font-size="9.5" fill="#C53030">target 0.995</text>
+<polyline points="54,20 112,35 174,64 240,98 306,126 362,144" fill="none" stroke="#17A2B8" stroke-width="2.4"></polyline>
+<polyline points="362,144 432,158 504,167 578,171 676,174" fill="none" stroke="#E8C547" stroke-width="2.4" stroke-dasharray="7 5"></polyline>
+<g fill="#17A2B8"><circle cx="54" cy="20" r="4.5"></circle><circle cx="112" cy="35" r="4.5"></circle><circle cx="174" cy="64" r="4.5"></circle><circle cx="240" cy="98" r="4.5"></circle><circle cx="306" cy="126" r="4.5"></circle><circle cx="362" cy="144" r="5.5" stroke="#fff" stroke-width="2"></circle></g>
+<g font-family="Roboto Mono" font-size="9.5" fill="#A0AEC0"><text x="8" y="24">1.120</text><text x="8" y="69">1.080</text><text x="8" y="114">1.040</text><text x="8" y="178">1.000</text><text x="50" y="206">day 0</text><text x="340" y="206">day 13</text><text x="652" y="206">day 34</text></g>
+<rect x="372" y="28" width="158" height="48" rx="5" fill="#4A5568"></rect>
+<g font-family="Roboto Mono" font-size="9.5" fill="#F8F9FA"><text x="383" y="46">Jan 28 · 1.025 SG</text><text x="383" y="61" fill="#CBD5E0">70°F · activity slowing</text></g>
+</svg>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px">
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:12px;background:#fff"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#A0AEC0">START SG</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">1.120</div></div>
+<div style="border:1px solid #17A2B8;border-radius:8px;padding:12px;background:#E6F6F8"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#0F6F80">CURRENT</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px;color:#0F6F80">1.025</div></div>
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:12px;background:#fff"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#A0AEC0">ABV NOW</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">12.8%</div></div>
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:12px;background:#fff"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#A0AEC0">TEMP AVG</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px">70°F</div></div>
+<div style="border:1px solid #E2E8ED;border-radius:8px;padding:12px;background:#FDF6DE"><div style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#8A6D12">EST. DONE</div><div style="font-family:'Roboto Mono',monospace;font-size:17px;margin-top:4px;color:#8A6D12">Feb 18</div></div>
+</div>
+
+<div style="margin-top:18px;border:1px solid #E2E8ED;border-radius:8px;overflow:hidden;background:#fff">
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:.08em;color:#718096;background:#F8F9FA;padding:10px 12px;border-bottom:1px solid #E2E8ED"><div>DATE</div><div>GRAVITY</div><div>TEMP</div><div>DAY</div><div>NOTES</div><div></div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #EDF2F7"><div>Jan 28 · 7:10p</div><div style="font-family:'Roboto Mono',monospace;color:#0F6F80">1.025</div><div style="font-family:'Roboto Mono',monospace">70°F</div><div style="font-family:'Roboto Mono',monospace">13</div><div style="color:#718096">Activity slowing</div><div style="text-align:right;color:#A0AEC0">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #EDF2F7"><div>Jan 24 · 8:02a</div><div style="font-family:'Roboto Mono',monospace">1.042</div><div style="font-family:'Roboto Mono',monospace">71°F</div><div style="font-family:'Roboto Mono',monospace">9</div><div style="color:#A0AEC0">—</div><div style="text-align:right;color:#A0AEC0">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px;border-bottom:1px solid #EDF2F7"><div>Jan 20 · 6:40p</div><div style="font-family:'Roboto Mono',monospace">1.068</div><div style="font-family:'Roboto Mono',monospace">72°F</div><div style="font-family:'Roboto Mono',monospace">5</div><div style="color:#718096">Vigorous</div><div style="text-align:right;color:#A0AEC0">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11.5px;padding:11px 12px"><div>Jan 15 · 5:15p</div><div style="font-family:'Roboto Mono',monospace">1.120</div><div style="font-family:'Roboto Mono',monospace">68°F</div><div style="font-family:'Roboto Mono',monospace">0</div><div style="color:#718096">Pitched T58</div><div style="text-align:right;color:#A0AEC0">⋯</div></div>
+</div>
+
+<div style="margin-top:14px;display:flex;gap:12px;align-items:center;border:1px solid #E2E8ED;border-radius:8px;padding:12px 14px;background:#fff">
+<div style="width:36px;height:20px;border-radius:10px;background:#17A2B8;display:flex;justify-content:flex-end;align-items:center;padding:0 2px"><div style="width:16px;height:16px;border-radius:50%;background:#fff"></div></div>
+<div style="font-size:11.5px;color:#4A5568">Notify me within <span style="font-family:'Roboto Mono',monospace">±0.005 SG</span> of target · last sent Jan 25</div>
+<div style="flex:1"></div>
+<div style="font-size:11.5px;color:#0F6F80;text-decoration:underline">Snooze 3 days</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "put this palette on the recipe screens too" · "the gold buttons feel loud — try outlined gold" · "show the mobile screens in color"</p>
+</section>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname"><a class="dv-oid" href="#1a">1a</a> with filtering — two placements</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Filter bar under the tabs</div>
+<div class="dv-card" style="width:820px">
+<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7">
+<div style="font-family:Caveat,cursive;font-size:22px;color:#2b2b2b">Mead Makers</div>
+<div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:13px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">search batches or recipes</div>
+<div style="width:26px;height:26px;border:1.5px solid #2b2b2b;border-radius:50%;background:#e3e1dc"></div>
+<div style="font-size:11px;color:#6b675f">Avery ▾</div>
+</div>
+<div style="display:flex;min-height:520px">
+<div style="width:172px;border-right:1.5px solid #2b2b2b;background:#f6f5f2;padding:14px 12px;display:flex;flex-direction:column;gap:9px">
+<div style="padding:6px 8px;background:#2b2b2b;color:#fff;border-radius:4px;font-size:12px">Dashboard</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Calendar</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">My Recipes</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Community</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Settings</div>
+<div style="height:1px;background:#d6d2c9;margin:6px 0"></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f;display:flex;flex-direction:column;gap:5px">
+<div>3 active</div><div>12 bottled</div><div>2 failed</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+<div style="font-family:Caveat,cursive;font-size:24px;color:#2b2b2b">Your cellar</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:6px 12px;font-size:12px;background:#f2e6cf">+ New Batch</div>
+</div>
+<div style="display:flex;gap:6px;border-bottom:1.5px solid #d6d2c9">
+<div style="padding:6px 10px;font-size:11.5px;border-bottom:2.5px solid #2b2b2b;margin-bottom:-1.5px">All (17)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Active (3)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Clearing (2)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Bottled (12)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Failed (2)</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:11px 0 10px;border-bottom:1px solid #e6e3dc">
+<div style="font-size:10px;letter-spacing:.06em;color:#8d8880">FILTER</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 9px;font-size:11px;color:#4a463f;display:flex;gap:14px"><span>Recipe: any</span><span style="color:#8d8880">▾</span></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 9px;font-size:11px;color:#4a463f;display:flex;gap:14px"><span>Honey: any</span><span style="color:#8d8880">▾</span></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 9px;font-size:11px;color:#4a463f;display:flex;gap:14px"><span>Yeast: any</span><span style="color:#8d8880">▾</span></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 9px;font-size:11px;color:#4a463f;display:flex;gap:14px"><span>Started: last 12 mo</span><span style="color:#8d8880">▾</span></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 9px;font-size:11px;color:#4a463f;display:flex;gap:8px;align-items:center"><span style="width:12px;height:12px;border:1.5px solid #b9b5ac;border-radius:3px;display:inline-block"></span><span>Reading due</span></div>
+<div style="flex:1"></div>
+<div style="font-size:11px;color:#4a463f">Sort: due date <span style="color:#8d8880">▾</span></div>
+<div style="display:flex;border:1.5px solid #b9b5ac;border-radius:4px;overflow:hidden"><div style="padding:4px 8px;background:#f2e6cf;font-size:10px;border-right:1.5px solid #b9b5ac">▦</div><div style="padding:4px 8px;font-size:10px;color:#8d8880">☰</div></div>
+</div>
+
+<div style="display:flex;align-items:center;gap:7px;padding:9px 0 12px;flex-wrap:wrap">
+<div style="font-size:11px;color:#6b675f">3 of 17 batches</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:12px;padding:3px 9px;font-size:10.5px;background:#faf9f7;display:flex;gap:7px"><span>Honey: Wildflower</span><span style="color:#8d8880">✕</span></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:12px;padding:3px 9px;font-size:10.5px;background:#faf9f7;display:flex;gap:7px"><span>Reading due</span><span style="color:#8d8880">✕</span></div>
+<div style="font-size:10.5px;color:#8a6d3b;text-decoration:underline">Clear all</div>
+<div style="flex:1"></div>
+<div style="font-family:Caveat,cursive;font-size:16px;color:#8d8880">chips echo what's applied</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower 2024 · Batch 3</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 15 · day 13</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:78%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.025 SG</span><span>target 0.995</span></div>
+</div>
+<div style="font-size:11px;color:#4a463f">Last reading 2 days ago · est. ~Feb 18</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower 2023 · Batch 2</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #E67E22;color:#a85b14;background:#fdf1e6;letter-spacing:.06em">CLEARING</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Dec 02 · day 57</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:100%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>0.998 SG</span><span>stabilized Jan 27</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading due today</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower Melomel</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Berry Melomel v2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 24 · day 4</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:22%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.094 SG</span><span>target 0.996</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading due today</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px dashed #b9b5ac;border-radius:6px;padding:13px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:150px;color:#8d8880">
+<div style="font-family:Caveat,cursive;font-size:19px">no results state</div>
+<div style="font-size:11px;text-align:center;max-width:190px">"No batches match these filters." + Clear all</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Filter rail in the sidebar</div>
+<div class="dv-card" style="width:820px">
+<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7">
+<div style="font-family:Caveat,cursive;font-size:22px;color:#2b2b2b">Mead Makers</div>
+<div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:13px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">search batches or recipes</div>
+<div style="width:26px;height:26px;border:1.5px solid #2b2b2b;border-radius:50%;background:#e3e1dc"></div>
+<div style="font-size:11px;color:#6b675f">Avery ▾</div>
+</div>
+<div style="display:flex;min-height:560px">
+<div style="width:196px;border-right:1.5px solid #2b2b2b;background:#f6f5f2;padding:14px 12px;display:flex;flex-direction:column;gap:9px">
+<div style="padding:6px 8px;background:#2b2b2b;color:#fff;border-radius:4px;font-size:12px">Dashboard</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Calendar</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">My Recipes</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Community</div>
+<div style="height:1px;background:#d6d2c9;margin:4px 0"></div>
+
+<div style="display:flex;align-items:center;gap:8px"><div style="font-size:10px;letter-spacing:.06em;color:#8d8880;flex:1">FILTERS</div><div style="font-size:10px;color:#8a6d3b;text-decoration:underline">Reset</div></div>
+
+<div style="display:flex;flex-direction:column;gap:6px;margin-top:2px">
+<div style="font-size:10.5px;color:#6b675f">Status</div>
+<div style="display:flex;flex-direction:column;gap:5px;font-size:11px;color:#4a463f">
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #2b2b2b;border-radius:3px;background:#2b2b2b"></span><span style="flex:1">Active</span><span style="font-family:'Roboto Mono',monospace;font-size:10px;color:#8d8880">3</span></div>
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #2b2b2b;border-radius:3px;background:#2b2b2b"></span><span style="flex:1">Clearing</span><span style="font-family:'Roboto Mono',monospace;font-size:10px;color:#8d8880">2</span></div>
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #b9b5ac;border-radius:3px"></span><span style="flex:1">Bottled</span><span style="font-family:'Roboto Mono',monospace;font-size:10px;color:#8d8880">12</span></div>
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #b9b5ac;border-radius:3px"></span><span style="flex:1">Failed</span><span style="font-family:'Roboto Mono',monospace;font-size:10px;color:#8d8880">2</span></div>
+</div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:10.5px;color:#6b675f">Recipe</div>
+<div style="height:28px;border:1.5px solid #b9b5ac;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:11px"><span>Any</span><span style="color:#8d8880">▾</span></div>
+<div style="font-size:10.5px;color:#6b675f;margin-top:4px">Honey type</div>
+<div style="height:28px;border:1.5px solid #b9b5ac;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:11px"><span>Wildflower</span><span style="color:#8d8880">▾</span></div>
+<div style="font-size:10.5px;color:#6b675f;margin-top:4px">Yeast</div>
+<div style="height:28px;border:1.5px solid #b9b5ac;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 8px;font-size:11px"><span>Any</span><span style="color:#8d8880">▾</span></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="font-size:10.5px;color:#6b675f">Started between</div>
+<div style="display:flex;gap:6px"><div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:4px;background:#fff;display:flex;align-items:center;padding:0 6px;font-family:'Roboto Mono',monospace;font-size:10px">2023-08</div><div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:4px;background:#fff;display:flex;align-items:center;padding:0 6px;font-family:'Roboto Mono',monospace;font-size:10px">2024-02</div></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:5px;font-size:11px;color:#4a463f">
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #2b2b2b;border-radius:3px;background:#2b2b2b"></span>Reading overdue</div>
+<div style="display:flex;align-items:center;gap:7px"><span style="width:12px;height:12px;border:1.5px solid #b9b5ac;border-radius:3px"></span>Notifications on</div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="font-family:Caveat,cursive;font-size:15px;color:#8d8880">saved view: "needs attention"</div>
+</div>
+
+<div style="flex:1;padding:16px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+<div style="font-family:Caveat,cursive;font-size:24px;color:#2b2b2b">Your cellar</div>
+<div style="flex:1"></div>
+<div style="font-size:11px;color:#4a463f">Sort: due date <span style="color:#8d8880">▾</span></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:6px 12px;font-size:12px;background:#f2e6cf">+ New Batch</div>
+</div>
+<div style="display:flex;align-items:center;gap:7px;padding-bottom:12px;border-bottom:1px solid #e6e3dc;flex-wrap:wrap">
+<div style="font-size:11px;color:#6b675f">3 of 17 batches</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:12px;padding:3px 9px;font-size:10.5px;background:#faf9f7;display:flex;gap:7px"><span>Active + Clearing</span><span style="color:#8d8880">✕</span></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:12px;padding:3px 9px;font-size:10.5px;background:#faf9f7;display:flex;gap:7px"><span>Wildflower</span><span style="color:#8d8880">✕</span></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:12px;padding:3px 9px;font-size:10.5px;background:#faf9f7;display:flex;gap:7px"><span>Reading overdue</span><span style="color:#8d8880">✕</span></div>
+<div style="font-size:10.5px;color:#8a6d3b;text-decoration:underline">Save this view</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower 2024 · Batch 3</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 15 · day 13</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:78%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.025 SG</span><span>target 0.995</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading overdue by 2 days</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower 2023 · Batch 2</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #E67E22;color:#a85b14;background:#fdf1e6;letter-spacing:.06em">CLEARING</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Dec 02 · day 57</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:100%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>0.998 SG</span><span>stabilized Jan 27</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading overdue by 5 days</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower Melomel</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Berry Melomel v2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 24 · day 4</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:22%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.094 SG</span><span>target 0.996</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading due today</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+<div style="border:1.5px dashed #b9b5ac;border-radius:6px;padding:13px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:150px;color:#8d8880">
+<div style="font-family:Caveat,cursive;font-size:19px">no results state</div>
+<div style="font-size:11px;text-align:center;max-width:190px">"No batches match these filters." + Reset</div>
+</div>
+</div>
+<div style="margin-top:14px;font-family:Caveat,cursive;font-size:16px;color:#8d8880">status tabs are gone — status is just another filter here</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "go with <a class="dv-oid" href="#2a">2a</a> and show the filter dropdown open" · "keep the status tabs in <a class="dv-oid" href="#2b">2b</a> too" · "how does the filter collapse on mobile?"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Mead Makers — first pass wireframes</span></div>
+
+<div class="dv-olabel" style="margin:0 0 12px;font-weight:600;color:rgba(0,0,0,.75)">Dashboard / Cellar — three densities</div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Rich cards · progress bar</div>
+<div class="dv-card" style="width:820px">
+<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7">
+<div style="font-family:Caveat,cursive;font-size:22px;color:#2b2b2b">Mead Makers</div>
+<div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:13px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">search batches or recipes</div>
+<div style="width:26px;height:26px;border:1.5px solid #2b2b2b;border-radius:50%;background:#e3e1dc"></div>
+<div style="font-size:11px;color:#6b675f">Avery ▾</div>
+</div>
+<div style="display:flex;min-height:520px">
+<div style="width:172px;border-right:1.5px solid #2b2b2b;background:#f6f5f2;padding:14px 12px;display:flex;flex-direction:column;gap:9px">
+<div style="padding:6px 8px;background:#2b2b2b;color:#fff;border-radius:4px;font-size:12px">Dashboard</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Calendar</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">My Recipes</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Community</div>
+<div style="padding:6px 8px;font-size:12px;color:#4a463f">Settings</div>
+<div style="height:1px;background:#d6d2c9;margin:6px 0"></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f;display:flex;flex-direction:column;gap:5px">
+<div>3 active</div><div>12 bottled</div><div>2 failed</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+<div style="font-family:Caveat,cursive;font-size:24px;color:#2b2b2b">Your cellar</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:6px 12px;font-size:12px;background:#f2e6cf">+ New Batch</div>
+</div>
+<div style="display:flex;gap:6px;border-bottom:1.5px solid #d6d2c9;margin-bottom:14px">
+<div style="padding:6px 10px;font-size:11.5px;border-bottom:2.5px solid #2b2b2b;margin-bottom:-1.5px">All (17)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Active (3)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Clearing (2)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Bottled (12)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Failed (2)</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Wildflower 2024 · Batch 3</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Traditional Wildflower Mead</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 15 · day 13</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:78%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.025 SG</span><span>target 0.995</span></div>
+</div>
+<div style="font-size:11px;color:#4a463f">Last reading 2 days ago · est. ~Feb 18</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Orange Blossom Hydromel</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #E67E22;color:#a85b14;background:#fdf1e6;letter-spacing:.06em">CLEARING</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Light Session Hydromel</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Dec 02 · day 57</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:100%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>0.998 SG</span><span>stabilized Jan 27</span></div>
+</div>
+<div style="font-size:11px;color:#4a463f">Racked Jan 30 · bottle in ~7 days</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:13px;display:flex;flex-direction:column;gap:9px;background:#fff">
+<div style="display:flex;align-items:flex-start;gap:8px">
+<div style="flex:1;font-size:14px;color:#2b2b2b">Blueberry Melomel</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb;letter-spacing:.06em">ACTIVE</div>
+</div>
+<div style="font-size:11px;color:#6b675f">Berry Melomel v2</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">Started Jan 24 · day 4</div>
+<div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:22%;height:100%;background:#d9be89"></div></div>
+<div style="display:flex;justify-content:space-between;font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:4px"><span>1.094 SG</span><span>target 0.996</span></div>
+</div>
+<div style="font-size:11px;color:#c0392b">Reading due today</div>
+<div style="display:flex;gap:8px;margin-top:2px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11.5px;color:#4a463f">Details</div>
+</div>
+</div>
+
+<div style="border:1.5px dashed #b9b5ac;border-radius:6px;padding:13px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:150px;color:#8d8880">
+<div style="font-family:Caveat,cursive;font-size:19px">empty slot / new batch</div>
+<div style="font-size:11px;text-align:center;max-width:180px">no batches yet → this card becomes the empty state CTA</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Compact list · curve sparkline</div>
+<div class="dv-card" style="width:820px">
+<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7">
+<div style="font-family:Caveat,cursive;font-size:22px;color:#2b2b2b">Mead Makers</div>
+<div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:13px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">search</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">+ New Batch</div>
+<div style="width:24px;height:24px;border:1.5px solid #2b2b2b;border-radius:50%;background:#e3e1dc"></div>
+</div>
+<div style="display:flex;min-height:520px">
+<div style="width:150px;border-right:1.5px solid #2b2b2b;background:#f6f5f2;padding:14px 10px;display:flex;flex-direction:column;gap:8px">
+<div style="padding:5px 8px;background:#2b2b2b;color:#fff;border-radius:4px;font-size:11.5px">Dashboard</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">Calendar</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">My Recipes</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">Community</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">Settings</div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="display:flex;gap:6px;border-bottom:1.5px solid #d6d2c9;margin-bottom:6px">
+<div style="padding:6px 10px;font-size:11.5px;border-bottom:2.5px solid #2b2b2b;margin-bottom:-1.5px">Active (3)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Clearing (2)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Bottled (12)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">All (17)</div>
+<div style="flex:1"></div>
+<div style="padding:6px 0;font-size:11px;color:#6b675f">sort: due date ▾</div>
+</div>
+<div style="display:grid;grid-template-columns:1.6fr 84px 96px 120px 100px 96px;gap:0;font-family:'Roboto Mono',monospace;font-size:9.5px;color:#8d8880;padding:8px 6px;border-bottom:1px solid #d6d2c9;letter-spacing:.05em">
+<div>BATCH</div><div>STATUS</div><div>LAST SG</div><div>CURVE</div><div>EST. DONE</div><div></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.6fr 84px 96px 120px 100px 96px;align-items:center;gap:0;padding:11px 6px;border-bottom:1px solid #e6e3dc;background:#faf9f7">
+<div><div style="font-size:12.5px;color:#2b2b2b">Wildflower 2024 · B3</div><div style="font-size:10px;color:#8d8880">day 13 · Wildflower recipe</div></div>
+<div><span style="font-size:9px;padding:2px 6px;border-radius:9px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb">ACTIVE</span></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">1.025</div>
+<div><svg width="104" height="26" viewBox="0 0 104 26"><polyline points="2,4 16,6 32,12 50,19 68,22 84,23" fill="none" stroke="#2b2b2b" stroke-width="1.6"></polyline><polyline points="84,23 104,24" fill="none" stroke="#d9be89" stroke-width="1.6" stroke-dasharray="3 3"></polyline><line x1="0" y1="24.5" x2="104" y2="24.5" stroke="#E74C3C" stroke-width="1" stroke-dasharray="2 3"></line></svg></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">Feb 18</div>
+<div style="text-align:right"><span style="border:1.5px solid #2b2b2b;border-radius:4px;padding:4px 8px;font-size:10.5px;background:#f2e6cf">Log</span></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.6fr 84px 96px 120px 100px 96px;align-items:center;gap:0;padding:11px 6px;border-bottom:1px solid #e6e3dc">
+<div><div style="font-size:12.5px;color:#2b2b2b">Blueberry Melomel</div><div style="font-size:10px;color:#c0392b">reading due today</div></div>
+<div><span style="font-size:9px;padding:2px 6px;border-radius:9px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb">ACTIVE</span></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">1.094</div>
+<div><svg width="104" height="26" viewBox="0 0 104 26"><polyline points="2,3 14,5 26,9" fill="none" stroke="#2b2b2b" stroke-width="1.6"></polyline><polyline points="26,9 52,18 78,23 104,24" fill="none" stroke="#d9be89" stroke-width="1.6" stroke-dasharray="3 3"></polyline><line x1="0" y1="24.5" x2="104" y2="24.5" stroke="#E74C3C" stroke-width="1" stroke-dasharray="2 3"></line></svg></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">Feb 26</div>
+<div style="text-align:right"><span style="border:1.5px solid #2b2b2b;border-radius:4px;padding:4px 8px;font-size:10.5px;background:#f2e6cf">Log</span></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.6fr 84px 96px 120px 100px 96px;align-items:center;gap:0;padding:11px 6px;border-bottom:1px solid #e6e3dc;background:#faf9f7">
+<div><div style="font-size:12.5px;color:#2b2b2b">Orange Blossom Hydromel</div><div style="font-size:10px;color:#8d8880">day 57 · racked Jan 30</div></div>
+<div><span style="font-size:9px;padding:2px 6px;border-radius:9px;border:1.5px solid #E67E22;color:#a85b14;background:#fdf1e6">CLEARING</span></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">0.998</div>
+<div><svg width="104" height="26" viewBox="0 0 104 26"><polyline points="2,3 14,4 30,10 52,19 74,23 104,24" fill="none" stroke="#2b2b2b" stroke-width="1.6"></polyline><line x1="0" y1="24.5" x2="104" y2="24.5" stroke="#E74C3C" stroke-width="1" stroke-dasharray="2 3"></line></svg></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">bottle ~Feb 8</div>
+<div style="text-align:right"><span style="border:1.5px solid #b9b5ac;border-radius:4px;padding:4px 8px;font-size:10.5px;color:#4a463f">Log</span></div>
+</div>
+
+<div style="display:grid;grid-template-columns:1.6fr 84px 96px 120px 100px 96px;align-items:center;gap:0;padding:11px 6px;border-bottom:1px solid #e6e3dc">
+<div><div style="font-size:12.5px;color:#8d8880">Spiced Metheglin (failed)</div><div style="font-size:10px;color:#8d8880">stalled at 1.040</div></div>
+<div><span style="font-size:9px;padding:2px 6px;border-radius:9px;border:1.5px solid #E74C3C;color:#a5281a;background:#fdecea">FAILED</span></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#8d8880">1.040</div>
+<div><svg width="104" height="26" viewBox="0 0 104 26"><polyline points="2,4 20,9 40,13 62,13 84,13" fill="none" stroke="#b9b5ac" stroke-width="1.6"></polyline><line x1="0" y1="24.5" x2="104" y2="24.5" stroke="#E74C3C" stroke-width="1" stroke-dasharray="2 3"></line></svg></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:11px;color:#8d8880">—</div>
+<div></div>
+</div>
+<div style="margin-top:14px;font-family:Caveat,cursive;font-size:17px;color:#8d8880">↑ one row per batch — fits ~14 batches without scrolling</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Stage lanes · timeline framing</div>
+<div class="dv-card" style="width:820px">
+<div style="display:flex;align-items:center;gap:14px;padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7">
+<div style="font-family:Caveat,cursive;font-size:22px;color:#2b2b2b">Mead Makers</div>
+<div style="flex:1"></div>
+<div style="font-size:11px;color:#6b675f">search · Avery ▾</div>
+</div>
+<div style="display:flex;min-height:520px">
+<div style="width:150px;border-right:1.5px solid #2b2b2b;background:#f6f5f2;padding:14px 10px;display:flex;flex-direction:column;gap:8px">
+<div style="padding:5px 8px;background:#2b2b2b;color:#fff;border-radius:4px;font-size:11.5px">Dashboard</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">Calendar</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">My Recipes</div>
+<div style="padding:5px 8px;font-size:11.5px;color:#4a463f">Community</div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="display:flex;align-items:center;margin-bottom:14px">
+<div style="font-family:Caveat,cursive;font-size:24px">Cellar by stage</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:6px 12px;font-size:12px;background:#f2e6cf">+ New Batch</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.06em;color:#1f6fa5;border-bottom:2px solid #3498DB;padding-bottom:5px">FERMENTING · 3</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;display:flex;flex-direction:column;gap:7px">
+<div style="font-size:12px">Wildflower B3</div>
+<div style="display:flex;align-items:center;gap:4px">
+<div style="width:8px;height:8px;border-radius:50%;background:#2b2b2b"></div><div style="flex:1;height:2px;background:#2b2b2b"></div>
+<div style="width:8px;height:8px;border-radius:50%;background:#2b2b2b"></div><div style="flex:1;height:2px;background:#d6d2c9"></div>
+<div style="width:8px;height:8px;border-radius:50%;border:1.5px solid #d6d2c9"></div><div style="flex:1;height:2px;background:#d6d2c9"></div>
+<div style="width:8px;height:8px;border-radius:50%;border:1.5px solid #d6d2c9"></div>
+</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f">1.025 · day 13 of ~34</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px;text-align:center;font-size:10.5px;background:#f2e6cf">Log Reading</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;display:flex;flex-direction:column;gap:7px">
+<div style="font-size:12px">Blueberry Melomel</div>
+<div style="display:flex;align-items:center;gap:4px">
+<div style="width:8px;height:8px;border-radius:50%;background:#2b2b2b"></div><div style="flex:1;height:2px;background:#d6d2c9"></div>
+<div style="width:8px;height:8px;border-radius:50%;border:1.5px solid #d6d2c9"></div><div style="flex:1;height:2px;background:#d6d2c9"></div>
+<div style="width:8px;height:8px;border-radius:50%;border:1.5px solid #d6d2c9"></div><div style="flex:1;height:2px;background:#d6d2c9"></div>
+<div style="width:8px;height:8px;border-radius:50%;border:1.5px solid #d6d2c9"></div>
+</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#c0392b">reading due today</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px;text-align:center;font-size:10.5px;background:#f2e6cf">Log Reading</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.06em;color:#8a5f0c;border-bottom:2px solid #F39C12;padding-bottom:5px">STABILIZED · 1</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;display:flex;flex-direction:column;gap:7px">
+<div style="font-size:12px">Cyser No. 4</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f">0.996 · stable 9 days</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px;text-align:center;font-size:10.5px;color:#4a463f">→ Clearing</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.06em;color:#a85b14;border-bottom:2px solid #E67E22;padding-bottom:5px">CLEARING · 2</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;display:flex;flex-direction:column;gap:7px">
+<div style="font-size:12px">Orange Blossom</div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f">racked Jan 30</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px;text-align:center;font-size:10.5px;color:#4a463f">→ Bottled</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;font-size:12px">Ginger Mead</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.06em;color:#1c7a45;border-bottom:2px solid #27AE60;padding-bottom:5px">BOTTLED · 12</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px;font-size:11.5px;color:#6b675f">Wildflower B2 · 2023</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px;font-size:11.5px;color:#6b675f">Tupelo Traditional</div>
+<div style="border:1.5px dashed #b9b5ac;border-radius:5px;padding:8px;font-size:11px;color:#8d8880;text-align:center">show 10 more…</div>
+</div>
+</div>
+<div style="margin-top:16px;padding-top:12px;border-top:1px solid #d6d2c9;display:flex;gap:20px;font-size:11px;color:#6b675f">
+<div><span style="font-family:Caveat,cursive;font-size:16px">status change = drag between lanes</span></div>
+<div>Failed (2) + Archived collapsed at bottom</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="dv-olabel" style="margin:34px 0 12px;font-weight:600;color:rgba(0,0,0,.75)">Batch Details — where the curve lives</div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Chart as hero, log below</div>
+<div class="dv-card" style="width:760px">
+<div style="padding:14px 18px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:12px">
+<div style="font-size:11px;color:#8d8880">← Cellar</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 11px;font-size:11.5px;color:#4a463f">Change Status ▾</div>
+</div>
+<div style="padding:18px">
+<div style="display:flex;align-items:baseline;gap:10px">
+<div style="font-family:Caveat,cursive;font-size:28px">Wildflower 2024 · Batch 3</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb">ACTIVE</div>
+</div>
+<div style="font-size:11.5px;color:#6b675f;margin-top:4px">Recipe: Traditional Wildflower Mead · Started Jan 15, 2024 · day 13</div>
+
+<div style="margin-top:16px;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+<div style="font-size:12px">Fermentation curve</div>
+<div style="display:flex;gap:12px;font-family:'Roboto Mono',monospace;font-size:9.5px;color:#6b675f">
+<span>● readings</span><span style="color:#a8802f">– – predicted</span><span style="color:#c0392b">– – target</span>
+<span style="border:1px solid #b9b5ac;border-radius:3px;padding:1px 5px">SG</span><span style="padding:1px 5px;color:#8d8880">°Brix</span>
+</div>
+</div>
+<svg width="690" height="220" viewBox="0 0 690 220" style="display:block">
+<rect x="44" y="8" width="636" height="176" fill="#fbfaf8" stroke="#d6d2c9"></rect>
+<line x1="44" y1="52" x2="680" y2="52" stroke="#e6e3dc"></line>
+<line x1="44" y1="96" x2="680" y2="96" stroke="#e6e3dc"></line>
+<line x1="44" y1="140" x2="680" y2="140" stroke="#e6e3dc"></line>
+<line x1="44" y1="170" x2="680" y2="170" stroke="#E74C3C" stroke-width="1.4" stroke-dasharray="5 4"></line>
+<text x="600" y="165" font-family="Roboto Mono" font-size="9" fill="#c0392b">target 0.995</text>
+<polyline points="52,20 108,34 168,62 232,96 296,124 352,142" fill="none" stroke="#2b2b2b" stroke-width="2"></polyline>
+<polyline points="352,142 420,156 490,164 560,168 660,170" fill="none" stroke="#a8802f" stroke-width="2" stroke-dasharray="6 5"></polyline>
+<g fill="#2b2b2b"><circle cx="52" cy="20" r="4"></circle><circle cx="108" cy="34" r="4"></circle><circle cx="168" cy="62" r="4"></circle><circle cx="232" cy="96" r="4"></circle><circle cx="296" cy="124" r="4"></circle><circle cx="352" cy="142" r="4"></circle></g>
+<g font-family="Roboto Mono" font-size="9" fill="#8d8880"><text x="8" y="24">1.120</text><text x="8" y="68">1.080</text><text x="8" y="112">1.040</text><text x="8" y="174">1.000</text><text x="48" y="200">day 0</text><text x="330" y="200">day 13</text><text x="640" y="200">day 34</text></g>
+<rect x="360" y="30" width="150" height="46" fill="#fff" stroke="#2b2b2b"></rect>
+<g font-family="Roboto Mono" font-size="9" fill="#2b2b2b"><text x="370" y="46">Jan 28 · 1.025 SG</text><text x="370" y="60">70°F · "activity slowing"</text></g>
+</svg>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px">
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px"><div style="font-size:9.5px;color:#8d8880;letter-spacing:.05em">START SG</div><div style="font-family:'Roboto Mono',monospace;font-size:15px">1.120</div></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px"><div style="font-size:9.5px;color:#8d8880;letter-spacing:.05em">CURRENT</div><div style="font-family:'Roboto Mono',monospace;font-size:15px">1.025</div></div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px"><div style="font-size:9.5px;color:#8d8880;letter-spacing:.05em">ABV NOW</div><div style="font-family:'Roboto Mono',monospace;font-size:15px">12.8%</div></div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px"><div style="font-size:9.5px;color:#8d8880;letter-spacing:.05em">TEMP AVG</div><div style="font-family:'Roboto Mono',monospace;font-size:15px">70°F</div></div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:10px"><div style="font-size:9.5px;color:#8d8880;letter-spacing:.05em">EST. DONE</div><div style="font-family:'Roboto Mono',monospace;font-size:15px">Feb 18</div></div>
+</div>
+
+<div style="margin-top:16px;border:1.5px solid #2b2b2b;border-radius:6px;overflow:hidden">
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-family:'Roboto Mono',monospace;font-size:9.5px;color:#6b675f;background:#f6f5f2;padding:8px 10px;border-bottom:1.5px solid #2b2b2b;letter-spacing:.05em">
+<div>DATE</div><div>GRAVITY</div><div>TEMP</div><div>DAY</div><div>NOTES</div><div></div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11px;padding:9px 10px;border-bottom:1px solid #e6e3dc;background:#faf9f7"><div>Jan 28 · 7:10p</div><div style="font-family:'Roboto Mono',monospace">1.025</div><div style="font-family:'Roboto Mono',monospace">70°F</div><div style="font-family:'Roboto Mono',monospace">13</div><div style="color:#6b675f">Activity slowing</div><div style="text-align:right;color:#8d8880">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11px;padding:9px 10px;border-bottom:1px solid #e6e3dc"><div>Jan 24 · 8:02a</div><div style="font-family:'Roboto Mono',monospace">1.042</div><div style="font-family:'Roboto Mono',monospace">71°F</div><div style="font-family:'Roboto Mono',monospace">9</div><div style="color:#6b675f">—</div><div style="text-align:right;color:#8d8880">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11px;padding:9px 10px;border-bottom:1px solid #e6e3dc;background:#faf9f7"><div>Jan 20 · 6:40p</div><div style="font-family:'Roboto Mono',monospace">1.068</div><div style="font-family:'Roboto Mono',monospace">72°F</div><div style="font-family:'Roboto Mono',monospace">5</div><div style="color:#6b675f">Vigorous</div><div style="text-align:right;color:#8d8880">⋯</div></div>
+<div style="display:grid;grid-template-columns:1.2fr .8fr .7fr .6fr 1.6fr 60px;font-size:11px;padding:9px 10px"><div>Jan 15 · 5:15p</div><div style="font-family:'Roboto Mono',monospace">1.120</div><div style="font-family:'Roboto Mono',monospace">68°F</div><div style="font-family:'Roboto Mono',monospace">0</div><div style="color:#6b675f">Pitched T58</div><div style="text-align:right;color:#8d8880">⋯</div></div>
+</div>
+<div style="margin-top:12px;display:flex;gap:10px;align-items:center;border:1.5px dashed #b9b5ac;border-radius:5px;padding:10px">
+<div style="width:34px;height:18px;border:1.5px solid #2b2b2b;border-radius:9px;background:#f2e6cf;display:flex;justify-content:flex-end;align-items:center;padding:0 2px"><div style="width:14px;height:14px;border-radius:50%;background:#2b2b2b"></div></div>
+<div style="font-size:11px;color:#4a463f">Notify me within ±0.005 SG of target · last sent Jan 25 · <span style="text-decoration:underline">snooze 3 days</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1e">
+<div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Chart centre, summary rail right</div>
+<div class="dv-card" style="width:760px">
+<div style="padding:12px 18px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:10px">
+<div style="font-family:Caveat,cursive;font-size:22px">Wildflower 2024 · B3</div>
+<div style="font-size:9.5px;padding:3px 8px;border-radius:10px;border:1.5px solid #3498DB;color:#1f6fa5;background:#eaf4fb">ACTIVE</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px 11px;font-size:11.5px;color:#4a463f">Status ▾</div>
+</div>
+<div style="display:flex">
+<div style="flex:1;padding:16px;border-right:1.5px solid #2b2b2b">
+<div style="display:flex;gap:6px;border-bottom:1.5px solid #d6d2c9;margin-bottom:12px">
+<div style="padding:5px 9px;font-size:11.5px;border-bottom:2.5px solid #2b2b2b;margin-bottom:-1.5px">Curve</div>
+<div style="padding:5px 9px;font-size:11.5px;color:#6b675f">Readings (4)</div>
+<div style="padding:5px 9px;font-size:11.5px;color:#6b675f">Notes</div>
+<div style="padding:5px 9px;font-size:11.5px;color:#6b675f">Timeline</div>
+</div>
+<svg width="480" height="250" viewBox="0 0 480 250" style="display:block">
+<rect x="40" y="6" width="432" height="200" fill="#fbfaf8" stroke="#d6d2c9"></rect>
+<line x1="40" y1="56" x2="472" y2="56" stroke="#e6e3dc"></line>
+<line x1="40" y1="106" x2="472" y2="106" stroke="#e6e3dc"></line>
+<line x1="40" y1="156" x2="472" y2="156" stroke="#e6e3dc"></line>
+<line x1="40" y1="192" x2="472" y2="192" stroke="#E74C3C" stroke-width="1.4" stroke-dasharray="5 4"></line>
+<polyline points="48,18 122,38 196,78 260,120 322,150 380,166" fill="none" stroke="#2b2b2b" stroke-width="2"></polyline>
+<polyline points="380,166 420,180 450,188 470,191" fill="none" stroke="#a8802f" stroke-width="2" stroke-dasharray="6 5"></polyline>
+<g fill="#2b2b2b"><circle cx="48" cy="18" r="4"></circle><circle cx="122" cy="38" r="4"></circle><circle cx="196" cy="78" r="4"></circle><circle cx="260" cy="120" r="4"></circle><circle cx="322" cy="150" r="4"></circle><circle cx="380" cy="166" r="4"></circle></g>
+<g font-family="Roboto Mono" font-size="9" fill="#8d8880"><text x="4" y="22">1.120</text><text x="4" y="110">1.040</text><text x="4" y="196">1.000</text><text x="44" y="224">day 0</text><text x="360" y="224">day 13</text><text x="430" y="224">day 34</text></g>
+</svg>
+<div style="margin-top:10px;font-family:Caveat,cursive;font-size:17px;color:#8d8880">readings + notes live behind the tabs → chart never scrolls away</div>
+</div>
+<div style="width:222px;padding:16px;background:#faf9f7;display:flex;flex-direction:column;gap:12px">
+<div>
+<div style="font-size:9.5px;color:#8d8880;letter-spacing:.06em;margin-bottom:6px">PROGRESS</div>
+<div style="height:10px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:78%;height:100%;background:#d9be89"></div></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10px;color:#6b675f;margin-top:5px">78% · 1.025 → 0.995</div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:11px">
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Recipe</span><span style="text-decoration:underline">Wildflower</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Yeast</span><span style="font-family:'Roboto Mono',monospace">T58</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Start SG</span><span style="font-family:'Roboto Mono',monospace">1.120</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Current</span><span style="font-family:'Roboto Mono',monospace">1.025</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Target</span><span style="font-family:'Roboto Mono',monospace">0.995</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">ABV now</span><span style="font-family:'Roboto Mono',monospace">12.8%</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Temp</span><span style="font-family:'Roboto Mono',monospace">68–72°F</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Est. done</span><span style="font-family:'Roboto Mono',monospace">Feb 18 ±2</span></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="font-size:9.5px;color:#8d8880;letter-spacing:.06em">NOTIFICATIONS</div>
+<div style="display:flex;align-items:center;gap:8px"><div style="width:32px;height:17px;border:1.5px solid #2b2b2b;border-radius:9px;background:#f2e6cf;display:flex;justify-content:flex-end;align-items:center;padding:0 2px"><div style="width:13px;height:13px;border-radius:50%;background:#2b2b2b"></div></div><span style="font-size:11px">On · ±0.005 SG</span></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:5px;text-align:center;font-size:10.5px;color:#4a463f">Snooze 3 days</div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:10.5px;color:#6b675f">
+<div style="font-size:9.5px;color:#8d8880;letter-spacing:.06em">STATUS HISTORY</div>
+<div>Jan 15 — Active</div><div style="color:#b9b5ac">— Stabilized</div><div style="color:#b9b5ac">— Clearing</div><div style="color:#b9b5ac">— Bottled</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1f">
+<div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Log-first timeline, chart inline</div>
+<div class="dv-card" style="width:560px">
+<div style="padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:10px">
+<div style="font-family:Caveat,cursive;font-size:21px">Wildflower 2024 · B3</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">Log Reading</div>
+</div>
+<div style="padding:16px">
+<div style="display:flex;gap:10px;align-items:center;border:1.5px solid #2b2b2b;border-radius:6px;padding:11px;background:#faf9f7">
+<svg width="150" height="46" viewBox="0 0 150 46"><polyline points="4,6 30,12 58,24 88,34 118,40" fill="none" stroke="#2b2b2b" stroke-width="1.8"></polyline><polyline points="118,40 146,43" fill="none" stroke="#a8802f" stroke-width="1.8" stroke-dasharray="4 4"></polyline><line x1="0" y1="43.5" x2="150" y2="43.5" stroke="#E74C3C" stroke-dasharray="2 3"></line></svg>
+<div style="flex:1">
+<div style="font-family:'Roboto Mono',monospace;font-size:13px">1.025 SG · 12.8% ABV</div>
+<div style="font-size:11px;color:#6b675f">78% to target · est. Feb 18 ±2 days</div>
+</div>
+<div style="font-size:11px;text-decoration:underline;color:#8a6d3b">expand chart</div>
+</div>
+
+<div style="margin-top:16px;font-size:9.5px;letter-spacing:.06em;color:#8d8880">TIMELINE</div>
+<div style="margin-top:10px;padding-left:16px;border-left:2px solid #d6d2c9;display:flex;flex-direction:column;gap:14px">
+<div style="position:relative"><div style="position:absolute;left:-23px;top:3px;width:10px;height:10px;border-radius:50%;background:#2b2b2b"></div>
+<div style="font-size:12px">Reading · 1.025 SG · 70°F</div>
+<div style="font-size:10.5px;color:#6b675f">Jan 28 · day 13 — "Activity slowing"</div></div>
+<div style="position:relative"><div style="position:absolute;left:-23px;top:3px;width:10px;height:10px;border-radius:50%;border:2px solid #F39C12;background:#fff"></div>
+<div style="font-size:12px">Notification sent</div>
+<div style="font-size:10.5px;color:#6b675f">Jan 25 — "batch approaching target"</div></div>
+<div style="position:relative"><div style="position:absolute;left:-23px;top:3px;width:10px;height:10px;border-radius:50%;background:#2b2b2b"></div>
+<div style="font-size:12px">Reading · 1.042 SG · 71°F</div>
+<div style="font-size:10.5px;color:#6b675f">Jan 24 · day 9</div></div>
+<div style="position:relative"><div style="position:absolute;left:-23px;top:3px;width:10px;height:10px;border-radius:50%;background:#2b2b2b"></div>
+<div style="font-size:12px">Reading · 1.068 SG · 72°F</div>
+<div style="font-size:10.5px;color:#6b675f">Jan 20 · day 5 — "Vigorous"</div></div>
+<div style="position:relative"><div style="position:absolute;left:-23px;top:3px;width:10px;height:10px;border-radius:50%;border:2px solid #3498DB;background:#fff"></div>
+<div style="font-size:12px">Batch started · pitched T58</div>
+<div style="font-size:10.5px;color:#6b675f">Jan 15 · 1.120 SG · 68°F</div></div>
+</div>
+<div style="margin-top:16px;display:flex;gap:8px">
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">Change Status ▾</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">View Recipe</div>
+<div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">Edit</div>
+</div>
+<div style="margin-top:12px;font-family:Caveat,cursive;font-size:17px;color:#8d8880">events + readings in one stream — same layout works on phone</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="dv-olabel" style="margin:34px 0 12px;font-weight:600;color:rgba(0,0,0,.75)">Mobile — kitchen use</div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1g">
+<div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>Cellar · bottom nav + FAB</div>
+<div class="dv-card" style="width:320px">
+<div style="height:600px;display:flex;flex-direction:column;position:relative">
+<div style="padding:12px 14px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:8px">
+<div style="font-family:Caveat,cursive;font-size:19px">Cellar</div><div style="flex:1"></div>
+<div style="font-size:11px;color:#6b675f">search · ⚙</div>
+</div>
+<div style="display:flex;gap:6px;padding:10px 14px 8px;overflow:hidden;border-bottom:1px solid #e6e3dc">
+<div style="padding:4px 10px;font-size:10.5px;border:1.5px solid #2b2b2b;border-radius:12px;background:#f2e6cf">Active 3</div>
+<div style="padding:4px 10px;font-size:10.5px;border:1.5px solid #d6d2c9;border-radius:12px;color:#6b675f">Clearing 2</div>
+<div style="padding:4px 10px;font-size:10.5px;border:1.5px solid #d6d2c9;border-radius:12px;color:#6b675f">Bottled</div>
+</div>
+<div style="flex:1;padding:12px 14px;display:flex;flex-direction:column;gap:11px">
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:11px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:6px;align-items:flex-start"><div style="flex:1;font-size:13px">Wildflower 2024 · B3</div><div style="width:9px;height:9px;border-radius:50%;background:#3498DB;margin-top:4px"></div></div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:78%;height:100%;background:#d9be89"></div></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">1.025 SG · day 13 · est Feb 18</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:9px;text-align:center;font-size:12px;background:#f2e6cf">Log Reading</div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:11px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:6px;align-items:flex-start"><div style="flex:1;font-size:13px">Blueberry Melomel</div><div style="width:9px;height:9px;border-radius:50%;background:#3498DB;margin-top:4px"></div></div>
+<div style="height:9px;border:1.5px solid #b9b5ac;border-radius:5px;background:#f0eee9;overflow:hidden"><div style="width:22%;height:100%;background:#d9be89"></div></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#c0392b">reading due today</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:9px;text-align:center;font-size:12px;background:#f2e6cf">Log Reading</div>
+</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:6px;padding:11px;display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;gap:6px;align-items:flex-start"><div style="flex:1;font-size:13px;color:#4a463f">Orange Blossom</div><div style="width:9px;height:9px;border-radius:50%;background:#E67E22;margin-top:4px"></div></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#6b675f">clearing · bottle ~Feb 8</div>
+</div>
+</div>
+<div style="position:absolute;right:16px;bottom:74px;width:54px;height:54px;border:1.5px solid #2b2b2b;border-radius:27px;background:#f2e6cf;display:flex;align-items:center;justify-content:center;font-size:22px">+</div>
+<div style="border-top:1.5px solid #2b2b2b;background:#faf9f7;display:grid;grid-template-columns:repeat(4,1fr);padding:9px 0">
+<div style="text-align:center;font-size:10px"><div style="height:16px;width:16px;margin:0 auto 3px;border:1.5px solid #2b2b2b;border-radius:3px;background:#2b2b2b"></div>Cellar</div>
+<div style="text-align:center;font-size:10px;color:#6b675f"><div style="height:16px;width:16px;margin:0 auto 3px;border:1.5px solid #b9b5ac;border-radius:3px"></div>Calendar</div>
+<div style="text-align:center;font-size:10px;color:#6b675f"><div style="height:16px;width:16px;margin:0 auto 3px;border:1.5px solid #b9b5ac;border-radius:3px"></div>Recipes</div>
+<div style="text-align:center;font-size:10px;color:#6b675f"><div style="height:16px;width:16px;margin:0 auto 3px;border:1.5px solid #b9b5ac;border-radius:50%"></div>You</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1h">
+<div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>Batch detail + log sheet</div>
+<div class="dv-card" style="width:320px">
+<div style="height:600px;display:flex;flex-direction:column;position:relative;background:#fff">
+<div style="padding:12px 14px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;gap:8px;align-items:center">
+<div style="font-size:12px;color:#8d8880">←</div><div style="flex:1;font-family:Caveat,cursive;font-size:18px">Wildflower · B3</div>
+<div style="width:9px;height:9px;border-radius:50%;background:#3498DB"></div>
+</div>
+<div style="padding:12px 14px;display:flex;flex-direction:column;gap:12px;opacity:.45">
+<svg width="292" height="120" viewBox="0 0 292 120"><rect x="0" y="0" width="292" height="104" fill="#fbfaf8" stroke="#d6d2c9"></rect><line x1="0" y1="94" x2="292" y2="94" stroke="#E74C3C" stroke-dasharray="4 4"></line><polyline points="8,10 60,24 116,52 172,74 214,86" fill="none" stroke="#2b2b2b" stroke-width="2"></polyline><polyline points="214,86 256,92 286,94" fill="none" stroke="#a8802f" stroke-width="2" stroke-dasharray="5 4"></polyline></svg>
+<div style="display:flex;gap:8px"><div style="flex:1;border:1.5px solid #d6d2c9;border-radius:5px;padding:8px"><div style="font-size:9px;color:#8d8880">CURRENT</div><div style="font-family:'Roboto Mono',monospace;font-size:13px">1.025</div></div><div style="flex:1;border:1.5px solid #d6d2c9;border-radius:5px;padding:8px"><div style="font-size:9px;color:#8d8880">ABV</div><div style="font-family:'Roboto Mono',monospace;font-size:13px">12.8%</div></div><div style="flex:1;border:1.5px solid #d6d2c9;border-radius:5px;padding:8px"><div style="font-size:9px;color:#8d8880">DONE</div><div style="font-family:'Roboto Mono',monospace;font-size:13px">Feb 18</div></div></div>
+</div>
+<div style="position:absolute;inset:0;background:rgba(43,43,43,.28)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;border-top:1.5px solid #2b2b2b;border-radius:12px 12px 0 0;background:#fff;padding:14px;display:flex;flex-direction:column;gap:12px;box-shadow:0 -4px 12px rgba(0,0,0,.08)">
+<div style="width:42px;height:4px;border-radius:2px;background:#d6d2c9;margin:0 auto"></div>
+<div style="font-family:Caveat,cursive;font-size:21px">Log a reading</div>
+<div style="display:flex;gap:6px">
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:7px;font-size:11px;background:#f2e6cf">SG</div>
+<div style="flex:1;text-align:center;border:1.5px solid #d6d2c9;border-radius:4px;padding:7px;font-size:11px;color:#6b675f">°Brix</div>
+<div style="flex:1;text-align:center;border:1.5px solid #d6d2c9;border-radius:4px;padding:7px;font-size:11px;color:#6b675f">ABV%</div>
+</div>
+<div>
+<div style="font-size:10.5px;color:#6b675f;margin-bottom:4px">Gravity</div>
+<div style="height:52px;border:1.5px solid #2b2b2b;border-radius:6px;display:flex;align-items:center;padding:0 12px;font-family:'Roboto Mono',monospace;font-size:22px">1.018</div>
+<div style="font-size:10px;color:#8d8880;margin-top:4px">hydrometer at 68°F — we correct for temp</div>
+</div>
+<div style="display:flex;gap:10px">
+<div style="flex:1"><div style="font-size:10.5px;color:#6b675f;margin-bottom:4px">Temp °F</div><div style="height:44px;border:1.5px solid #b9b5ac;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:16px">70</div></div>
+<div style="flex:1"><div style="font-size:10.5px;color:#6b675f;margin-bottom:4px">When</div><div style="height:44px;border:1.5px solid #b9b5ac;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-size:12px">now</div></div>
+</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:6px;background:#faf9f7;padding:10px;display:flex;flex-direction:column;gap:5px">
+<div style="font-family:'Roboto Mono',monospace;font-size:11px">13.7% ABV · 90% of target</div>
+<div style="height:8px;border:1.5px solid #b9b5ac;border-radius:4px;background:#f0eee9;overflow:hidden"><div style="width:90%;height:100%;background:#d9be89"></div></div>
+<div style="font-size:10.5px;color:#6b675f">completion moves to Feb 14 (−4 days)</div>
+</div>
+<div style="height:44px;border:1.5px solid #b9b5ac;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">notes — "smells great"</div>
+<div style="display:flex;gap:9px">
+<div style="width:88px;text-align:center;border:1.5px solid #b9b5ac;border-radius:6px;padding:12px;font-size:12px;color:#4a463f">Cancel</div>
+<div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:6px;padding:12px;font-size:12.5px;background:#f2e6cf">Save Reading</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="dv-olabel" style="margin:34px 0 12px;font-weight:600;color:rgba(0,0,0,.75)">Single-direction screens</div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1i">
+<div class="dv-olabel"><a class="dv-oid" href="#1i">1i</a>Register New Batch — wizard + live math</div>
+<div class="dv-card" style="width:700px">
+<div style="padding:12px 18px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:12px">
+<div style="font-family:Caveat,cursive;font-size:21px">New batch</div>
+<div style="flex:1;display:flex;align-items:center;gap:6px;justify-content:center">
+<div style="display:flex;align-items:center;gap:5px;font-size:10.5px"><div style="width:18px;height:18px;border-radius:50%;background:#2b2b2b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px">1</div>Basics</div>
+<div style="width:26px;height:1.5px;background:#2b2b2b"></div>
+<div style="display:flex;align-items:center;gap:5px;font-size:10.5px"><div style="width:18px;height:18px;border-radius:50%;border:1.5px solid #2b2b2b;display:flex;align-items:center;justify-content:center;font-size:10px">2</div>Readings</div>
+<div style="width:26px;height:1.5px;background:#d6d2c9"></div>
+<div style="display:flex;align-items:center;gap:5px;font-size:10.5px;color:#8d8880"><div style="width:18px;height:18px;border-radius:50%;border:1.5px solid #d6d2c9;display:flex;align-items:center;justify-content:center;font-size:10px">3</div>Notes</div>
+</div>
+<div style="font-size:11px;color:#8d8880">Cancel</div>
+</div>
+<div style="display:flex">
+<div style="flex:1;padding:18px;display:flex;flex-direction:column;gap:14px;border-right:1.5px solid #2b2b2b">
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Batch name</div><div style="height:36px;border:1.5px solid #2b2b2b;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-size:12px">Wildflower 2024 · Batch 3</div></div>
+<div style="display:flex;gap:12px">
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Start date</div><div style="height:36px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px"><span>2024-01-15</span><span style="color:#8d8880">▤</span></div></div>
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Yeast strain</div><div style="height:36px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:12px"><span>Saf-ale T58</span><span style="color:#8d8880">▾</span></div><div style="font-family:'Roboto Mono',monospace;font-size:9.5px;color:#8d8880;margin-top:4px">µmax 0.081 h⁻¹ · ~28 days</div></div>
+</div>
+<div>
+<div style="font-size:11px;color:#4a463f;margin-bottom:6px">Recipe</div>
+<div style="display:flex;gap:10px">
+<div style="flex:1;border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;background:#faf9f7;display:flex;gap:8px;align-items:flex-start"><div style="width:12px;height:12px;border-radius:50%;border:1.5px solid #2b2b2b;background:#2b2b2b;margin-top:2px"></div><div><div style="font-size:11.5px">Use existing</div><div style="font-size:10px;color:#6b675f">mine + community favourites</div></div></div>
+<div style="flex:1;border:1.5px solid #d6d2c9;border-radius:5px;padding:10px;display:flex;gap:8px;align-items:flex-start"><div style="width:12px;height:12px;border-radius:50%;border:1.5px solid #b9b5ac;margin-top:2px"></div><div><div style="font-size:11.5px;color:#4a463f">Create new</div><div style="font-size:10px;color:#6b675f">inline recipe form</div></div></div>
+</div>
+<div style="height:36px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:12px;margin-top:10px"><span>Traditional Wildflower Mead</span><span style="color:#8d8880">▾</span></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="display:flex;gap:12px">
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Starting gravity (°Brix)</div><div style="height:36px;border:1.5px solid #2b2b2b;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:13px"><span>28.0</span><span style="font-size:10px;color:#8d8880">= 1.120 SG</span></div>
+<div style="margin-top:5px;border:1.5px solid #E67E22;background:#fdf1e6;border-radius:4px;padding:6px 8px;font-size:10px;color:#a85b14">above 25 °Brix may inhibit fermentation</div></div>
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Target ABV %</div><div style="height:36px;border:1.5px solid #2b2b2b;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:13px"><span>16.5</span><span style="font-size:10px;color:#8d8880">→ 0.995 SG</span></div>
+<div style="font-size:10px;color:#8d8880;margin-top:5px">°Brix ≈ 0.004 SG per point — we convert for you</div></div>
+</div>
+<div style="display:flex;gap:12px;align-items:flex-end">
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Initial temp °F (optional)</div><div style="height:36px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px">68</div></div>
+<div style="flex:1"></div>
+</div>
+</div>
+<div style="width:236px;padding:18px;background:#faf9f7;display:flex;flex-direction:column;gap:12px">
+<div style="font-size:9.5px;letter-spacing:.06em;color:#8d8880">LIVE SUMMARY</div>
+<svg width="200" height="90" viewBox="0 0 200 90"><rect x="0" y="0" width="200" height="76" fill="#fff" stroke="#d6d2c9"></rect><line x1="0" y1="68" x2="200" y2="68" stroke="#E74C3C" stroke-dasharray="4 4"></line><polyline points="6,8 48,20 96,46 140,62 194,68" fill="none" stroke="#a8802f" stroke-width="2" stroke-dasharray="6 5"></polyline><text x="6" y="88" font-family="Roboto Mono" font-size="8" fill="#8d8880">predicted curve · 34 days</text></svg>
+<div style="display:flex;flex-direction:column;gap:9px;font-size:11px">
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Initial gravity</span><span style="font-family:'Roboto Mono',monospace">1.120 SG</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Target gravity</span><span style="font-family:'Roboto Mono',monospace">0.995 SG</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Est. duration</span><span style="font-family:'Roboto Mono',monospace">28–35 d</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">First reading</span><span style="font-family:'Roboto Mono',monospace">Jan 20</span></div>
+<div style="display:flex;justify-content:space-between"><span style="color:#6b675f">Completion</span><span style="font-family:'Roboto Mono',monospace">~Feb 18</span></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div style="font-family:Caveat,cursive;font-size:16px;color:#8d8880">panel recalculates on every keystroke</div>
+<div style="flex:1"></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:10px;text-align:center;font-size:12.5px;background:#f2e6cf">Save Batch</div>
+<div style="text-align:center;font-size:11px;color:#8d8880">Cancel</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1j">
+<div class="dv-olabel"><a class="dv-oid" href="#1j">1j</a>Log Reading — desktop modal</div>
+<div class="dv-card" style="width:520px">
+<div style="background:#e8e6e1;padding:26px;display:flex;align-items:center;justify-content:center">
+<div style="width:100%;border:1.5px solid #2b2b2b;border-radius:8px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.12)">
+<div style="padding:13px 16px;border-bottom:1.5px solid #2b2b2b;display:flex;align-items:center">
+<div style="font-family:Caveat,cursive;font-size:21px;flex:1">Log a reading — Wildflower B3</div><div style="color:#8d8880">✕</div>
+</div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:13px">
+<div style="display:flex;gap:12px">
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Date</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px">2024-01-28</div></div>
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Time</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px">19:10</div></div>
+</div>
+<div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px"><div style="font-size:11px;color:#4a463f;flex:1">Gravity</div>
+<div style="display:flex;border:1.5px solid #b9b5ac;border-radius:4px;overflow:hidden;font-size:10px"><div style="padding:3px 9px;background:#f2e6cf;border-right:1.5px solid #b9b5ac">SG</div><div style="padding:3px 9px;color:#6b675f;border-right:1.5px solid #b9b5ac">°Brix</div><div style="padding:3px 9px;color:#6b675f">ABV%</div></div></div>
+<div style="height:42px;border:1.5px solid #2b2b2b;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:18px">1.018</div>
+<div style="font-size:10px;color:#8d8880;margin-top:4px">Read the hydrometer at 68°F — we correct for temperature.</div>
+</div>
+<div style="display:flex;gap:12px">
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Temperature °F</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px">70</div></div>
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Notes</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">surface activity reduced</div></div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;background:#faf9f7;padding:12px;display:flex;gap:12px;align-items:center">
+<svg width="120" height="52" viewBox="0 0 120 52"><line x1="0" y1="48" x2="120" y2="48" stroke="#E74C3C" stroke-dasharray="3 3"></line><polyline points="4,6 26,14 52,28 78,38" fill="none" stroke="#2b2b2b" stroke-width="1.8"></polyline><circle cx="94" cy="42" r="4" fill="#a8802f"></circle><polyline points="94,42 118,47" fill="none" stroke="#a8802f" stroke-width="1.8" stroke-dasharray="4 4"></polyline></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:5px">
+<div style="font-family:'Roboto Mono',monospace;font-size:12px">13.7 / 16.5% ABV · 90% of target</div>
+<div style="height:8px;border:1.5px solid #b9b5ac;border-radius:4px;background:#f0eee9;overflow:hidden"><div style="width:90%;height:100%;background:#d9be89"></div></div>
+<div style="font-size:10.5px;color:#6b675f">completion Feb 14 (was Feb 18)</div>
+</div>
+</div>
+<div style="display:flex;justify-content:flex-end;gap:9px">
+<div style="border:1.5px solid #b9b5ac;border-radius:5px;padding:8px 14px;font-size:11.5px;color:#4a463f">Cancel</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:8px 16px;font-size:12px;background:#f2e6cf">Save Reading</div>
+</div>
+</div>
+</div>
+</div>
+<div style="padding:12px 16px;border-top:1px solid #e6e3dc;display:flex;gap:10px;align-items:center;background:#faf9f7">
+<div style="border:1.5px solid #27AE60;background:#eaf7f0;border-radius:5px;padding:8px 11px;font-size:11px;color:#1c7a45">✓ Batch is ready — you'll get a notification</div>
+<div style="font-family:Caveat,cursive;font-size:16px;color:#8d8880">toast on save, 5s</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1k">
+<div class="dv-olabel"><a class="dv-oid" href="#1k">1k</a>My Recipes</div>
+<div class="dv-card" style="width:640px">
+<div style="padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:12px">
+<div style="font-family:Caveat,cursive;font-size:22px">My recipes</div>
+<div style="flex:1;height:26px;border:1.5px solid #b9b5ac;border-radius:13px;background:#fff;display:flex;align-items:center;padding:0 10px;font-size:11px;color:#8d8880">search recipes</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">+ New Recipe</div>
+</div>
+<div style="padding:14px 16px">
+<div style="display:flex;gap:6px;border-bottom:1.5px solid #d6d2c9;margin-bottom:14px">
+<div style="padding:6px 10px;font-size:11.5px;border-bottom:2.5px solid #2b2b2b;margin-bottom:-1.5px">Mine (7)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Starred (3)</div>
+<div style="padding:6px 10px;font-size:11.5px;color:#6b675f">Recently used</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:13px">
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:7px">
+<div style="display:flex;gap:8px;align-items:flex-start"><div style="flex:1;font-size:13.5px">Traditional Wildflower Mead</div><div style="font-size:9px;padding:2px 7px;border:1.5px solid #b9b5ac;border-radius:9px;color:#6b675f">PUBLIC</div></div>
+<div style="font-size:10.5px;color:#8d8880">by you · used in 2 batches</div>
+<div style="height:1px;background:#e6e3dc"></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#4a463f;display:flex;flex-direction:column;gap:3px"><div>4 lb wildflower honey · 3:1</div><div>Saf-ale T58</div><div>2 additions — DAP, acid</div></div>
+<div style="display:flex;gap:7px;margin-top:3px"><div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11px;background:#f2e6cf">Use Recipe</div><div style="text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">Edit</div></div>
+</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:7px">
+<div style="display:flex;gap:8px;align-items:flex-start"><div style="flex:1;font-size:13.5px">Berry Melomel v2</div><div style="font-size:9px;padding:2px 7px;border:1.5px solid #b9b5ac;border-radius:9px;color:#6b675f">PRIVATE</div></div>
+<div style="font-size:10.5px;color:#8d8880">by you · used in 1 batch</div>
+<div style="height:1px;background:#e6e3dc"></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#4a463f;display:flex;flex-direction:column;gap:3px"><div>5 lb orange blossom · 2.5:1</div><div>Mangrove Jack's M05</div><div>3 additions — fruit, spice</div></div>
+<div style="display:flex;gap:7px;margin-top:3px"><div style="flex:1;text-align:center;border:1.5px solid #2b2b2b;border-radius:4px;padding:6px;font-size:11px;background:#f2e6cf">Use Recipe</div><div style="text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">Edit</div></div>
+</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:7px">
+<div style="display:flex;gap:8px;align-items:flex-start"><div style="flex:1;font-size:13.5px;color:#4a463f">Quick Session Hydromel</div><div style="font-size:9px;padding:2px 7px;border:1.5px solid #b9b5ac;border-radius:9px;color:#6b675f">LINK</div></div>
+<div style="font-size:10.5px;color:#8d8880">saved from @experienced_maker</div>
+<div style="height:1px;background:#e6e3dc"></div>
+<div style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#4a463f">2 lb clover honey · 4:1 · T58</div>
+<div style="display:flex;gap:7px;margin-top:3px"><div style="flex:1;text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px;font-size:11px;color:#4a463f">Use Recipe</div><div style="text-align:center;border:1.5px solid #b9b5ac;border-radius:4px;padding:6px 10px;font-size:11px;color:#4a463f">View</div></div>
+</div>
+<div style="border:1.5px dashed #b9b5ac;border-radius:6px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#8d8880;min-height:120px">
+<div style="font-family:Caveat,cursive;font-size:18px">empty state</div>
+<div style="font-size:10.5px;text-align:center;max-width:170px">No recipes yet — create one or browse community recipes.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="dv-opt" id="1l">
+<div class="dv-olabel"><a class="dv-oid" href="#1l">1l</a>Recipe create / edit</div>
+<div class="dv-card" style="width:640px">
+<div style="padding:12px 16px;border-bottom:1.5px solid #2b2b2b;background:#faf9f7;display:flex;align-items:center;gap:10px">
+<div style="font-family:Caveat,cursive;font-size:21px;flex:1">New recipe</div>
+<div style="font-size:11px;color:#8d8880">Cancel</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:4px;padding:5px 11px;font-size:11.5px;background:#f2e6cf">Save Recipe</div>
+</div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:15px">
+<div style="display:flex;gap:12px">
+<div style="flex:1.4"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Recipe name</div><div style="height:34px;border:1.5px solid #2b2b2b;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-size:12px">Traditional Wildflower Mead</div></div>
+<div style="flex:1"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Tags</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 8px;gap:5px"><span style="font-size:10px;border:1px solid #b9b5ac;border-radius:9px;padding:2px 7px;color:#4a463f">traditional</span><span style="font-size:10px;color:#8d8880">+ add</span></div></div>
+</div>
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Description</div><div style="height:46px;border:1.5px solid #b9b5ac;border-radius:5px;padding:8px 10px;font-size:11px;color:#8d8880">A traditional hydromel with local wildflower honey…</div></div>
+<div>
+<div style="font-size:11px;color:#4a463f;margin-bottom:6px">Visibility</div>
+<div style="display:flex;gap:8px">
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:7px 11px;font-size:11px;background:#faf9f7">● Private</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:7px 11px;font-size:11px;color:#4a463f">○ Public</div>
+<div style="border:1.5px solid #d6d2c9;border-radius:5px;padding:7px 11px;font-size:11px;color:#4a463f">○ Shared by link</div>
+</div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div>
+<div style="font-size:9.5px;letter-spacing:.06em;color:#8d8880;margin-bottom:9px">UNIVERSAL INGREDIENTS</div>
+<div style="display:grid;grid-template-columns:1.3fr .9fr .9fr;gap:10px">
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Honey type</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:12px"><span>Wildflower</span><span style="color:#8d8880">▾</span></div></div>
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Quantity</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px"><span>4.0</span><span style="font-size:10px;color:#8d8880">lbs ▾</span></div></div>
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Water ratio</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;padding:0 10px;font-family:'Roboto Mono',monospace;font-size:12px">3:1</div></div>
+</div>
+<div style="margin-top:10px"><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Yeast strain</div><div style="height:34px;border:1.5px solid #b9b5ac;border-radius:5px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:12px"><span>Fermentis Saf-ale T58</span><span style="color:#8d8880">▾</span></div><div style="font-family:'Roboto Mono',monospace;font-size:9.5px;color:#8d8880;margin-top:4px">µmax 0.081 h⁻¹ · ~28 days to 0.995 SG</div></div>
+</div>
+<div style="height:1px;background:#d6d2c9"></div>
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:9px"><div style="font-size:9.5px;letter-spacing:.06em;color:#8d8880;flex:1">OPTIONAL INGREDIENTS</div><div style="border:1.5px solid #b9b5ac;border-radius:4px;padding:4px 9px;font-size:10.5px;color:#4a463f">+ Add ingredient</div></div>
+<div style="border:1.5px solid #2b2b2b;border-radius:6px;overflow:hidden">
+<div style="display:grid;grid-template-columns:1.3fr 1fr .6fr .7fr 1.4fr 34px;font-family:'Roboto Mono',monospace;font-size:9px;color:#6b675f;background:#f6f5f2;padding:7px 10px;border-bottom:1.5px solid #2b2b2b;letter-spacing:.05em"><div>NAME</div><div>CATEGORY</div><div>QTY</div><div>UNIT</div><div>NOTES</div><div></div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr .6fr .7fr 1.4fr 34px;align-items:center;font-size:11px;padding:8px 10px;border-bottom:1px solid #e6e3dc"><div>Blueberry</div><div style="color:#6b675f">Fruit ▾</div><div style="font-family:'Roboto Mono',monospace">2</div><div style="color:#6b675f">lbs ▾</div><div style="color:#8d8880">for aroma</div><div style="text-align:right;color:#8d8880">✕</div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr .6fr .7fr 1.4fr 34px;align-items:center;font-size:11px;padding:8px 10px;border-bottom:1px solid #e6e3dc;background:#faf9f7"><div>Cinnamon</div><div style="color:#6b675f">Spice ▾</div><div style="font-family:'Roboto Mono',monospace">1</div><div style="color:#6b675f">tsp ▾</div><div style="color:#8d8880">to taste</div><div style="text-align:right;color:#8d8880">✕</div></div>
+<div style="display:grid;grid-template-columns:1.3fr 1fr .6fr .7fr 1.4fr 34px;align-items:center;font-size:11px;padding:8px 10px"><div>DAP</div><div style="color:#6b675f">Nutrient ▾</div><div style="font-family:'Roboto Mono',monospace">1</div><div style="color:#6b675f">tsp ▾</div><div style="color:#8d8880">staggered</div><div style="text-align:right;color:#8d8880">✕</div></div>
+</div>
+</div>
+<div><div style="font-size:11px;color:#4a463f;margin-bottom:5px">Author notes</div><div style="height:52px;border:1.5px solid #b9b5ac;border-radius:5px;padding:8px 10px;font-size:11px;color:#8d8880">Fermentation tips, aging, when to bottle…</div></div>
+<div style="display:flex;align-items:center;gap:10px;padding-top:4px;border-top:1px solid #e6e3dc">
+<div style="font-size:11px;color:#c0392b;text-decoration:underline">Delete recipe</div><div style="flex:1"></div>
+<div style="border:1.5px solid #b9b5ac;border-radius:5px;padding:7px 13px;font-size:11.5px;color:#4a463f">Cancel</div>
+<div style="border:1.5px solid #2b2b2b;border-radius:5px;padding:7px 15px;font-size:12px;background:#f2e6cf">Save Recipe</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<p class="dv-next">Try next: "take <a class="dv-oid" href="#1b">1b</a> forward and give me the calendar + community gallery" · "merge <a class="dv-oid" href="#1e">1e</a>'s summary rail into <a class="dv-oid" href="#1d">1d</a>" · "mobile versions of the recipe screens" · "new dashboard directions"</p>
+</section>
+</x-dc>
+</body>
+</html>
