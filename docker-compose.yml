@@ -44,6 +44,7 @@ services:
       - server
     environment:
       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000}
+      WATCHPACK_POLLING: "true"
     ports:
       - "${CLIENT_PORT:-3000}:3000"
     volumes:

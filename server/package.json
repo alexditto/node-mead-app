@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "ts-node-dev --respawn --poll --transpile-only src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "postinstall": "prisma generate",
@@ -13,7 +13,8 @@
     "@prisma/client": "^5.18.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.22.2",
+    "lucide-react": "^1.32.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

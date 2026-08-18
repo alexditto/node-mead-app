@@ -1,0 +1,7 @@
+.modeToggle {
+  justify-content: space-between;
+}
+
+.modeToggle :global(.seg-opt + .seg-opt) {
+  border-left: none;
+}
